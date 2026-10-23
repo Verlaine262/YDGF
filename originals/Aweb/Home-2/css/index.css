@@ -1,0 +1,235 @@
+body {
+    background-color: #EEF5FF;
+}
+
+.zwf {
+    height: 100px;
+}
+
+/* A1-导航栏 */
+
+.nav {
+    background-color: #e9f1fc;
+    height: 100px;
+    width: 100%;
+    margin: auto 0;
+    box-shadow: 0px 0px 5px 2px #91b8eb;
+    position: fixed;
+}
+
+.nav .main {
+    display: flex;
+    height: 100px;
+    margin: auto;
+    width: 75%;
+    min-width: 800px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 标题 */
+
+.nav .main .title {
+    display: flex;
+    justify-content: center;
+    width: 210px;
+    max-width: 250px;
+    min-width: 210px;
+    margin: auto 0;
+    height: 80%;
+    border-radius: 15px;
+}
+
+.nav .main .title img {
+    width: 64px;
+    margin-right: 10px;
+}
+
+.nav .main .title h1 {
+    justify-content: center;
+    color: #1a59b3;
+    font-size: 32px;
+    text-align: center;
+    line-height: 80px;
+    height: 100%;
+    width: 250px;
+}
+
+/* 导航栏内容 */
+
+.nav .main ul {
+    width: 100%;
+    max-width: 750px;
+    min-width: 300px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav .main ul li {
+    margin: auto 10px;
+}
+
+.nav .main ul li img {
+    height: 32px;
+    margin-right: 5px;
+}
+
+.nav .main ul li a {
+    display: flex;
+    align-items: center;
+    min-width: 90px;
+    height: 60px;
+    border-radius: 30px;
+    padding: 0 18px 0 14px;
+    color: #1a59b3;
+    font-size: 16px;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+.nav .main ul li a:hover {
+    background: #a6c6f2;
+}
+
+/* 用户 */
+
+.nav .main .user {
+    display: flex;
+    height: 60px;
+    background: #79a9ec;
+    align-items: center;
+    padding: 10px 5px 10px;
+    border-radius: 30px;
+}
+
+.nav .main .user .icon {
+    height: 32px;
+    margin-left: 8px;
+    margin-right: 6px;
+}
+
+.nav .main .user h3{
+    width: 32px;
+    font-size: 16px;
+    font-weight: normal;
+    margin-right: 10px;
+}
+
+.nav .main .user .head {
+    display: flex;
+    border-radius: 50%;
+}
+
+.nav .main .user .head img {
+    height: 50px;
+    border-radius: 50%;
+}
+
+/* A-2主页部分 */
+
+.school {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+/* 背景图片 */
+
+.school .box {
+    display: flex;
+    flex-direction: column;
+    width: 1600px;
+    align-self: center;
+    box-shadow: -0px 0px 2px 1px rgba(156, 156, 156, 0.5);
+}
+
+.school .box .background {
+    align-self: center;
+    height: 750px;
+    width: 1600px;
+    z-index: -1;
+    background-image: url(../image/107090500_p0.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    overflow: hidden;
+}
+
+.school .box .background img {
+    width: 1600px;
+}
+
+/* 标题 */
+
+.school .box .imagetitle {
+    z-index: -1;
+    margin-top: 300px;
+    align-self: center;
+    height: 64px;
+    position: static;
+    color: #176B87;
+}
+
+.school .box .imagetitle h1 {
+    font-size: 64px;
+}
+
+/* 填充按钮底下空白部分 */
+
+.school .box .fill {
+    background: pink;
+    z-index: -1;
+    margin-top: -40px;
+    width: 1600px;
+    height: 80px;
+    align-self: center;
+}
+
+/* 按钮 */
+
+.school .box .button {
+    width: 600px;
+    height: 80px;
+    display: flex;
+    align-self: center;
+    margin-top: 346px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: -2px 0px 2px 1px rgba(156, 156, 156, 0.5);
+}
+
+.school .box .button li a {
+    display: flex;
+    width: 200px;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    color: #86B6F6;
+}
+
+.school .box .button li a img {
+    height: 40px;
+}
+
+.school .box .button li a p {
+    margin-left: 10px;
+}
+
+.school .box .button li:hover {
+    background: #fff;
+    border-radius: 10px;
+    background-color: #e3efff;
+    font-weight: 700;
+}
+
+/* 文本 */
+
+.school .box .text {
+    background: #fff;
+    z-index: -1;
+    /* margin-top: px; */
+    width: 1600px;
+    height: 400px;
+    align-self: center;
+}
+

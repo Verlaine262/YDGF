@@ -1,0 +1,374 @@
+﻿
+
+<!--4.1.6-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>广州大学附属中学英德实验学校学生校园网</title>
+    <style>
+        * {
+    padding: 0%;
+    margin: 0%;
+}
+
+header {
+    background-color: brown;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+}
+
+h1 {
+    color: gold;
+}
+
+h4 {
+    color: transparent;
+}
+
+h1 {
+    position: absolute;
+    left: 120px;
+    top: 0;
+    line-height: 80px;
+    background-image: url(Images/logo_64x64.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    width: -500px;
+    text-indent: 80px;
+}
+
+h4 {
+    position: absolute;
+    left: 120px;
+    top: 2px;
+    line-height: 80px;
+    background-image: url(Images/BA_133x83.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    width: -500px;
+    text-indent: 80px;
+}
+
+h4 {
+    display: none;
+}
+
+header li {
+    display: list-item;
+    unicode-bidi: isolate;
+    justify-content: center;
+}
+
+header a {
+    color: gold;
+    text-decoration: none;
+}
+
+    header a:hover {
+        text-decoration: none;
+    }
+
+.顶层菜单栏 {
+    position: absolute;
+    display: flex;
+    right: 3vw;
+    top: 0;
+    line-height: 80px;
+    text-align: center;
+    list-style: none;
+}
+
+.按钮 {
+    width: 100px;
+}
+
+    .按钮:hover {
+        background-color: #d15a39;
+    }
+
+.菜单 {
+    display: flex;
+}
+
+.下拉菜单:hover {
+    background-color: #d15a39;
+}
+
+.下拉菜单 li:hover {
+    background-color: #d15a39;
+}
+
+.下拉菜单 ul li {
+    height: 0;
+    transition: .2s;
+    opacity: 0;
+    transform: translateY(-65px);
+    background-color: #e07a5f;
+}
+
+.下拉菜单:hover li {
+    height: 65px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.学校校训 {
+    background-color: antiquewhite;
+    color: white;
+    height: 95vh;
+    background-image: url(Images/2_1920x1080.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.学校校训 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+    .学校校训 h2 {
+        font-size: 60px;
+        margin-top: 60px;
+    }
+
+    .学校校训 p {
+        color: #FEF7E6;
+        font-size: 18px;
+        margin: 25px 0;
+    }
+
+    .学校校训 a {
+        color: white;
+        text-decoration: none;
+        border: 1px solid #ACACAC;
+        padding: 10px 20px;
+        border-radius: 5px;
+    }
+
+footer {
+    background-color: black;
+    color: #b7b7b7;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+.学校简介 {
+    display: flex;
+}
+
+    .学校简介 img {
+        width: 50%;
+    }
+
+.学校简介区块 {
+    width: 50%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+    .学校简介区块 h3 {
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+
+    .学校简介区块 p {
+        text-align: center;
+        line-height: 2em;
+    }
+
+.菜单 {
+    display: none;
+}
+
+.了解更多 a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 10px 10px 30px 0px lightgray;
+}
+
+    .了解更多 a:hover {
+        box-shadow: none;
+        background-color: #d15a39;
+        color: darkorange;
+    }
+
+.了解更多 h2 {
+    font-size: 20px;
+}
+
+        /* 响应式部分 */
+        @media screen and (max-width: 1398px) {
+            .顶层菜单栏 {
+                display: none;
+            }
+
+            header h1 {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .菜单 {
+                display: flex;
+                background-color: transparent;
+                color: white;
+                font-size: 35px;
+                position: absolute;
+                top: 15px;
+                left: 20px;
+                border: none;
+                cursor: pointer;
+                text-align: center;
+            }
+
+            .下拉菜单 {
+                line-height: 50px;
+                height: 50px;
+                list-style: none
+            }
+
+                .下拉菜单 li {
+                    font-size: 25px;
+                    list-style: none
+                }
+
+            .学校简介 {
+                flex-direction: column;
+            }
+
+                .学校简介 img {
+                    width: 100%;
+                }
+
+            .学校简介区块 {
+                width: 100%;
+                padding: 40px 0;
+            }
+
+                .学校简介区块 h3 {
+                    font-size: 30px;
+                }
+        }
+
+        @media screen and (max-width: 1071px) {
+            header h1 {
+                display: none;
+            }
+
+            h4 {
+                display: block;
+            }
+
+            h4 {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropbtn {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body><aside style="padding:16px;background:#fff2d2;color:#352b1f;position:relative;z-index:9999">原版静态存档 · 后端功能不可用。<a href="../../../../../index.html#archive">返回新版网站</a></aside>
+    <header>
+        <ul class="菜单">
+            <li class="下拉菜单">
+                <span>&#9776;</span>
+                <ul>
+                    <li id="loginButton" class="按钮"><a href="../login_system/Login.html"><img src="Images/log_64x64.png" /></a></li>
+                    <li id="logoutButtonMenu" class="按钮" style="display:none;"><a href="javascript:void(0);">注销</a></li>
+                    <li><a href="Homepage.html">首页</a></li>
+                    <li><a href="#">学习乐园</a></li>
+                    <li><a href="#">社区</a></li>
+                    <li><a href="https://tieba.baidu.com/f?ie=utf-8&kw=%E5%B9%BF%E5%B7%9E%E5%A4%A7%E5%AD%A6%E9%99%84%E5%B1%9E%E4%B8%AD%E5%AD%A6%E8%8B%B1%E5%BE%B7%E5%AE%9E%E9%AA%8C%E5%AD%A6%E6%A0%A1&tab=main">百度贴吧</a></li>
+                    <li><a href="#">关于</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <h1>广州大学附属中学英德实验学校</h1>
+        <h4>英德广附</h4>
+        <nav>
+            <ul class="顶层菜单栏">
+                <li class="按钮 dropdown">
+                    <span></span>
+                    <div class="dropdown-content">
+                        <a href="javascript:void(0);" id="logoutBtn">注销</a>
+                    </div>
+                </li>
+                <li class="按钮"><a href="#">学习乐园</a></li>
+                <li class="按钮"><a href="#">社区</a></li>
+                <li class="按钮"><a href="https://tieba.baidu.com/f?ie=utf-8&kw=%E5%B9%BF%E5%B7%9E%E5%A4%A7%E5%AD%A6%E9%99%84%E5%B1%9E%E4%B8%AD%E5%AD%A6%E8%8B%B1%E5%BE%B7%E5%AE%9E%E9%AA%8C%E5%AD%A6%E6%A0%A1&tab=main">百度贴吧</a></li>
+                <li class="按钮"><a href="#">关于</a></li>
+            </ul>
+            <span></span>
+        </nav>
+    </header>
+    <main>
+        <section class="学校校训">
+            <h2>做最好的自己！</h2>
+            <div class="了解更多">
+                <h2><a href="https://baike.baidu.com/item/%E5%B9%BF%E5%B7%9E%E5%A4%A7%E5%AD%A6%E9%99%84%E5%B1%9E%E8%8B%B1%E5%BE%B7%E5%AE%9E%E9%AA%8C%E5%AD%A6%E6%A0%A1/55118601?fr=ge_ala">了解更多</a></h2>
+            </div>
+        </section>
+        <section class="学校简介">
+            <img src="Images/1_1440x8103.png" alt="广州大学附属中学英德实验学校风景1">
+            <div class="学校简介区块">
+                <h3>学校简介</h3>
+                <p>
+                    广州大学附属英德实验学校创办于2020年9月1日，是由英德市人民政府和广州大学附属中学合作创办的一所公办学校，学校地址位于英德市裕光路205号
+                    备受英德市民群众关注的广大附中英德实验学校经过8个多月紧张有序的筹备和建设，8月26日顺利揭牌，9月1日将正式开学。此举表明英德学子将在家门口直享广州一线品质教育资源。英德市主要领导、英德市教育局、财政局及相关单位，广大附中校领导及教师职工代表参加了揭牌仪式。
+                    据了解，广大附中英德实验学校是由英德市人民政府和广州大学附属中学（下称“广大附中”）合办的一所公办学校，校址位于原英德市第二中学，目前已筹建完毕，并已完成招生工作。学校将于9月1日正式开学，开设高一教学班6个、初一教学班10个，增加该市初中、高中阶段优质学位800个，将进一步满足群众优质教育需求，引领带动英德教育教学质量整体提升，推动英德教育高质量发展。
+                    英德市委副书记、市长肖勇科在揭牌仪式上致辞时表示，百年大计，教育为本。一直以来，英德市委、市政府坚持教育优先发展，不断加大教育投入，加快完善教育基础设施建设，持续深化教育体制机制改革，有效提升了英德教育改革发展的质量和水平，人民群众对英德教育的认可度和满意度正在不断提升。广大附中英德实验学校，就是其中的一个重要项目。英德市委、市政府将继续全力支持广大附中英德实验学校发展，努力把广大附中英德实验学校打造成一所高品质、有特色、有影响力的教育品牌，推动英德教育再上新台阶。
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright © 2024 YDGF Test</p>
+    </footer>
+
+    
+</body>
+</html>

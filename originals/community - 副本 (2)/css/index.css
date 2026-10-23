@@ -1,0 +1,292 @@
+body {
+    background-color: #EEF5FF;
+}
+
+/* A1-导航栏 */
+
+.nav {
+    background-color: #B4D4FF;
+    height: 100px;
+    margin: auto 0;
+    box-shadow: 0px 0px 5px 2px #91b8eb;;
+}
+
+.nav .main {
+    display: flex;
+    height: 100px;
+    margin: auto;
+    width: 75%;
+    min-width: 800px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 标题 */
+
+.nav .main .title {
+    display: flex;
+    justify-content: center;
+    width: 210px;
+    max-width: 250px;
+    min-width: 210px;
+    margin: auto 0;
+    height: 80%;
+    border-radius: 15px;
+}
+
+.nav .main .title img {
+    width: 64px;
+    margin-right: 10px;
+}
+
+.nav .main .title h1 {
+    justify-content: center;
+    color: #176B87;
+    font-size: 32px;
+    text-align: center;
+    line-height: 80px;
+    height: 100%;
+    width: 250px;
+}
+
+/* 导航栏内容 */
+
+.nav .main ul {
+    width: 100%;
+    max-width: 750px;
+    min-width: 300px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav .main ul li {
+    margin: auto 10px;
+}
+
+.nav .main ul li img {
+    height: 32px;
+    margin-right: 5px;
+}
+
+.nav .main ul li a {
+    display: flex;
+    align-items: center;
+    min-width: 90px;
+    height: 60px;
+    border-radius: 30px;
+    padding: 0 18px 0 14px;
+    color: #176B87;
+    font-size: 16px;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+.nav .main ul li a:hover {
+    background: #86B6F6;
+}
+
+/* 用户 */
+
+.nav .main .user {
+    display: flex;
+    height: 60px;
+    background: #86B6F6;
+    align-items: center;
+    padding: 10px 5px 10px;
+    border-radius: 30px;
+}
+
+.nav .main .user .icon {
+    height: 32px;
+    margin-left: 4px;
+    margin-right: 6px;
+}
+
+.nav .main .user h3{
+    width: 32px;
+    font-size: 16px;
+    font-weight: normal;
+    margin-right: 10px;
+}
+
+.nav .main .user .head {
+    display: flex;
+    border-radius: 50%;
+}
+
+.nav .main .user .head img {
+    height: 50px;
+    border-radius: 50%;
+}
+
+/* 返回顶部 */
+
+.top {
+    background-color: skyblue;
+    height: 75px;
+    width: 75px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    border-radius: 20%;
+    background-image: url(../image/回到顶部.png);
+    background-size: 45px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.edit {
+    background-color: skyblue;
+    height: 75px;
+    width: 75px;
+    position: fixed;
+    bottom: 125px;
+    right: 30px;
+    border-radius: 20%;
+    background-image: url(../image/编辑.png);
+    background-size: 60px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* 帖子区域 */
+
+/* 头部 */
+
+.all {
+    margin-top: 124px;
+}
+
+.tie {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    width:80%;
+    margin: 24px auto;
+    /* height: 500px; */
+    border-radius: 12px;
+    box-shadow: 0px 0px 5px 2px rgb(239, 242, 255);
+    min-width: 768px;
+}
+
+.tie .head {
+    display: flex;
+    margin: 18px 36px;
+    height: 56px;
+    /* background-color: pink; */
+    min-width: 768px;
+}
+
+.tie .head .tou {
+    display: flex;
+    height: 56px;
+    width: 56px;
+    /* border-radius: 50%; */
+    /* background-image: url(../image/118098344_p1.jpg); */
+    background-size: cover;
+    background-color: #fff;
+}
+
+.tie .head .tou img {
+    border-radius: 50%;
+}
+
+.tie .head .dt {
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tie .head .dt .name {
+    margin-top: 5px;
+}
+
+.tie .head .dt .name a {
+    color: skyblue;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.tie .head .dt .time {
+    color: gray;
+    font-size: 15px;
+}
+
+/* 没有大会员你蓝个蛋（bushi */
+
+.tie .head .dt .name .none {
+    color: gray;
+}
+
+/* 主 体 */
+
+.tie .main {
+    height: 70%;
+    /* background-color: pink; */
+    margin: 0 36px;
+    margin-bottom: 18px;
+}
+
+.tie .main .text {
+    display: flex;
+    width: 100%;
+
+}
+
+.tie .main .text a {
+    display: flex;
+    /* width: 100px; */
+    flex-direction: column;
+}
+
+/* 标题 */
+
+.tie .main .text h1 {
+    font-size: 36px;
+    color: #000;
+}
+
+/* 正文 */
+
+.tie .main .text p {
+    /* display: flex; */
+    /* width: 100px; */
+    margin-top: 12px;
+    font-size: 18px;
+    color: #000;
+}
+
+.tie .main .picture img {
+    margin-top: 20px;
+    display: flex;
+    height: 400px;
+}
+
+/* 功能区域 */
+
+.tie .function {
+    display: flex;
+    margin: 18px 0;
+    justify-content: space-around;
+}
+
+.tie .function {
+    display: flex;
+    text-align: center;
+    min-width: 614px;
+}
+
+.tie .function .icon {
+    height: 30px;
+}
+
+.tie .function .x {
+    display: flex;
+}
+
+.tie .function .x p {
+    color: gray;
+    padding-top: 8px;
+}
+
+/* 2025.2.25 新增固定顶部栏，固定缩放最小 */

@@ -1,0 +1,190 @@
+body {
+    background-color: #ebebeb;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+.nav {
+    background-color: skyblue;
+    height: 100px;
+    margin: auto 0;
+    /* display: flex; */
+}
+
+.nav .main {
+    display: flex;
+    height: 100px;
+    width: 75%;
+    margin: auto;
+    width: 75%;
+}
+
+.nav .main h1 {
+    justify-content: center;
+    color: #fff;
+    font-size: 48px;
+    margin-top: 18px;
+    margin-right: 50px;
+    width: 30%;
+}
+
+.nav .main ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav .main ul li {
+    margin: auto 20px;
+}
+
+.nav .main ul li a {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.nav .main ul .now a {
+    border-bottom: 5px solid #fff;
+}
+
+/* 响应式 */
+
+@media screen and (min-width= 1000px) {
+    .nav {
+        background-color: #fff;
+        height: 500px;
+    }
+
+}
+
+/* 帖子区域 */
+
+/* 头部 */
+
+.tie {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    width:80%;
+    margin: 24px auto;
+    /* height: 500px; */
+    border-radius: 12px;
+}
+
+.tie .head {
+    display: flex;
+    margin: 18px 36px;
+    height: 56px;
+    /* background-color: pink; */
+}
+
+.tie .head .tou {
+    display: flex;
+    height: 56px;
+    width: 56px;
+    /* border-radius: 50%; */
+    /* background-image: url(../image/118098344_p1.jpg); */
+    background-size: cover;
+    background-color: #fff;
+}
+
+.tie .head .tou img {
+    border-radius: 50%;
+}
+
+.tie .head .dt {
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tie .head .dt .name {
+    margin-top: 5px;
+}
+
+.tie .head .dt .name a {
+    color: skyblue;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.tie .head .dt .time {
+    color: gray;
+    font-size: 15px;
+}
+
+/* 没有大会员你蓝个蛋（bushi */
+
+.tie .head .dt .name .none {
+    color: gray;
+}
+
+/* 主 体 */
+
+.tie .main {
+    height: 70%;
+    /* background-color: pink; */
+    margin: 0 36px;
+    margin-bottom: 18px;
+}
+
+.tie .main .text {
+    display: flex;
+    width: 100%;
+}
+
+.tie .main .text a {
+    display: flex;
+    /* width: 100px; */
+    flex-direction: column;
+}
+
+/* 标题 */
+
+.tie .main .text h1 {
+    font-size: 36px;
+    color: #000;
+}
+
+/* 正文 */
+
+.tie .main .text p {
+    /* display: flex; */
+    /* width: 100px; */
+    margin-top: 12px;
+    font-size: 18px;
+    color: #000;
+}
+
+.tie .main .picture img {
+    margin-top: 20px;
+    display: flex;
+    height: 400px;
+}
+
+/* 功能区域 */
+
+.tie .function {
+    display: flex;
+    margin: 18px 0;
+    justify-content: space-around;
+}
+
+.tie .function {
+    display: flex;
+    text-align: center;
+}
+
+.tie .function .icon {
+    height: 30px;
+}
+
+.tie .function .x {
+    display: flex;
+}
+
+.tie .function .x p {
+    color: gray;
+    padding-top: 8px;
+}

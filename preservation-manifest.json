@@ -1,0 +1,532 @@
+[
+  {
+    "source": "Aweb/Home-2/css/base.css",
+    "published": "originals/Aweb/Home-2/css/base.css",
+    "sha256": "bd87ea15b1086ed39a19d1ace08378d754ef15e1ff17e926d32ebacf78c44977"
+  },
+  {
+    "source": "Aweb/Home-2/css/index.css",
+    "published": "originals/Aweb/Home-2/css/index.css",
+    "sha256": "a6774243d6161818d5d45747e907e734ba827f8ca8cb707847e3ce931726f5ae"
+  },
+  {
+    "source": "Aweb/Home-2/image/104696295_p0.png",
+    "published": "originals/Aweb/Home-2/image/104696295_p0.png",
+    "sha256": "b4a275cc650c266c15d0a9432fbd7bf63209539647ae66bbe5740480570a223b"
+  },
+  {
+    "source": "Aweb/Home-2/image/107957401_p0.jpg",
+    "published": "originals/Aweb/Home-2/image/107957401_p0.jpg",
+    "sha256": "2812b93c9e7d85cb83ad3e000cb2d43980f0320dbf754420ca3116266ce3be01"
+  },
+  {
+    "source": "Aweb/Home-2/image/book-multiple.svg",
+    "published": "originals/Aweb/Home-2/image/book-multiple.svg",
+    "sha256": "f44abde830dc8f0c3d3c32c1f4214df5476bbd7fdb44acc72c205f8a367f9c5b"
+  },
+  {
+    "source": "Aweb/Home-2/image/ic_archive_24px.svg",
+    "published": "originals/Aweb/Home-2/image/ic_archive_24px.svg",
+    "sha256": "f70b07b6a77c62ffb37b2d4f41b658e8f2790c6872acd6be70fc1f35c7fe9852"
+  },
+  {
+    "source": "Aweb/Home-2/image/ic_home_24px.svg",
+    "published": "originals/Aweb/Home-2/image/ic_home_24px.svg",
+    "sha256": "7293fd19a661ecd829d370065c04f7fec537678e26a311e53769f806f77c463d"
+  },
+  {
+    "source": "Aweb/Home-2/image/ic_person_24px.svg",
+    "published": "originals/Aweb/Home-2/image/ic_person_24px.svg",
+    "sha256": "2f5c7f7e7730c36134663c00a3c29ff896598f860c885d792eba089d9393ec52"
+  },
+  {
+    "source": "Aweb/Home-2/image/information.svg",
+    "published": "originals/Aweb/Home-2/image/information.svg",
+    "sha256": "8730f33b4a55a0f969ff032bad1fc5e01d022d76afecde549c216ead37ab78e7"
+  },
+  {
+    "source": "Aweb/Home-2/image/minecraft.svg",
+    "published": "originals/Aweb/Home-2/image/minecraft.svg",
+    "sha256": "a109ee76f220d24e48c8e4eba6373002dc49615d7561e56753f6cbac3ed5d874"
+  },
+  {
+    "source": "Aweb/Home-2/image/school (1).svg",
+    "published": "originals/Aweb/Home-2/image/school (1).svg",
+    "sha256": "c52efabaf81069e597261cabf29865fac681f737072c71befe3a8b349387728b"
+  },
+  {
+    "source": "Aweb/Home-2/index.html",
+    "published": "originals/Aweb/Home-2/index.html",
+    "sha256": "ca4f0da79d4a6a6fa8e1b325e41f86f22bd49ca30301c7ca2949f29ae545b5df"
+  },
+  {
+    "source": "Aweb/New/css/base.css",
+    "published": "originals/Aweb/New/css/base.css",
+    "sha256": "bd87ea15b1086ed39a19d1ace08378d754ef15e1ff17e926d32ebacf78c44977"
+  },
+  {
+    "source": "Aweb/New/css/index.css",
+    "published": "originals/Aweb/New/css/index.css",
+    "sha256": "97d0e61da4abcec8c9011bbf06fee255349d5ad98c898f7ed0b8608b01eedc5f"
+  },
+  {
+    "source": "Aweb/New/index.html",
+    "published": "originals/Aweb/New/index.html",
+    "sha256": "68deabcb1aab78f0cfb11a00542c06f6f68820e8c9f1780566abbc77c85f9f3a"
+  },
+  {
+    "source": "community/css/base.css",
+    "published": "originals/community/css/base.css",
+    "sha256": "bd87ea15b1086ed39a19d1ace08378d754ef15e1ff17e926d32ebacf78c44977"
+  },
+  {
+    "source": "community/css/index.css",
+    "published": "originals/community/css/index.css",
+    "sha256": "37629f92c9197b3c6ec047e0170595c766ab677503e00288dc78bcecba4d15fb"
+  },
+  {
+    "source": "community/image/117661040_p4.png",
+    "published": "originals/community/image/117661040_p4.png",
+    "sha256": "b09cc76f8d81c01ddf87d5be8da41a9b13710dbbff72a335b904baecf449c7b8"
+  },
+  {
+    "source": "community/image/118098344_p1.jpg",
+    "published": "originals/community/image/118098344_p1.jpg",
+    "sha256": "2121fce59fcc2f2c819cc61821ed7887052e730cd0f36cd71b3314bf08ca4dbc"
+  },
+  {
+    "source": "community/image/1信息.png",
+    "published": "originals/community/image/1信息.png",
+    "sha256": "187b39048d682898cdf5016b004b3e774f71ea01a559d1056d4cac3cda3af20f"
+  },
+  {
+    "source": "community/image/1收藏-填充.png",
+    "published": "originals/community/image/1收藏-填充.png",
+    "sha256": "ff114e9955d0acd2fbe3aae04af52c49cb5acc61f1751d5414a3860b280d6435"
+  },
+  {
+    "source": "community/image/1点赞-填充.png",
+    "published": "originals/community/image/1点赞-填充.png",
+    "sha256": "a4b65ba36077690e78c3f1f9ae6d51b221ffd4545d54f4502ca93a329ce1d19b"
+  },
+  {
+    "source": "community/image/信息.png",
+    "published": "originals/community/image/信息.png",
+    "sha256": "e70957ebf6c79c5549b46c57e4c853de6f622c495c558d12d47c746233bba73d"
+  },
+  {
+    "source": "community/image/回到顶部.png",
+    "published": "originals/community/image/回到顶部.png",
+    "sha256": "fce4df245f51e02c61a2c9dd8d71ba3653f2b91d4abdeed4feaba49663b058b1"
+  },
+  {
+    "source": "community/image/屏幕截图 2025-02-21 135114.png",
+    "published": "originals/community/image/屏幕截图 2025-02-21 135114.png",
+    "sha256": "109562ebd18d6353f96b3464648f8f6a64df1f9100c1434461fd451417cc1cce"
+  },
+  {
+    "source": "community/image/收藏.png",
+    "published": "originals/community/image/收藏.png",
+    "sha256": "9ecb5739a718c25f024e93e22fe8f7856b541950489565fa92c4e6c2e887996e"
+  },
+  {
+    "source": "community/image/点赞.png",
+    "published": "originals/community/image/点赞.png",
+    "sha256": "d31c73cc9a17083db3ea7eee49d22fd2a9437d0ee2d70eea76928aaec02af19a"
+  },
+  {
+    "source": "community/image/编辑.png",
+    "published": "originals/community/image/编辑.png",
+    "sha256": "33e7c664cfc3bf668571717144514c29929392a889f2caf1ab00e1c9530ef066"
+  },
+  {
+    "source": "community/image/顶置.png",
+    "published": "originals/community/image/顶置.png",
+    "sha256": "8a88ac440965ecddd6f878925d7aabe02ec045e62a74521f6165e4c5d0d31e52"
+  },
+  {
+    "source": "community/index.html",
+    "published": "originals/community/index.html",
+    "sha256": "9e23bc501af41c3a1545e7f7128eeaebd802d67e2ff12c16c93d4e94138d21da"
+  },
+  {
+    "source": "community - 副本/css/base.css",
+    "published": "originals/community - 副本/css/base.css",
+    "sha256": "bd87ea15b1086ed39a19d1ace08378d754ef15e1ff17e926d32ebacf78c44977"
+  },
+  {
+    "source": "community - 副本/css/index.css",
+    "published": "originals/community - 副本/css/index.css",
+    "sha256": "944cba2364f963b52fa6b0421618de3491bb7f4708d17530ecf5728ea55b81e0"
+  },
+  {
+    "source": "community - 副本/image/117661040_p4.png",
+    "published": "originals/community - 副本/image/117661040_p4.png",
+    "sha256": "b09cc76f8d81c01ddf87d5be8da41a9b13710dbbff72a335b904baecf449c7b8"
+  },
+  {
+    "source": "community - 副本/image/118098344_p1.jpg",
+    "published": "originals/community - 副本/image/118098344_p1.jpg",
+    "sha256": "2121fce59fcc2f2c819cc61821ed7887052e730cd0f36cd71b3314bf08ca4dbc"
+  },
+  {
+    "source": "community - 副本/image/信息.png",
+    "published": "originals/community - 副本/image/信息.png",
+    "sha256": "187b39048d682898cdf5016b004b3e774f71ea01a559d1056d4cac3cda3af20f"
+  },
+  {
+    "source": "community - 副本/image/屏幕截图 2025-02-21 135114.png",
+    "published": "originals/community - 副本/image/屏幕截图 2025-02-21 135114.png",
+    "sha256": "109562ebd18d6353f96b3464648f8f6a64df1f9100c1434461fd451417cc1cce"
+  },
+  {
+    "source": "community - 副本/image/收藏-填充.png",
+    "published": "originals/community - 副本/image/收藏-填充.png",
+    "sha256": "ff114e9955d0acd2fbe3aae04af52c49cb5acc61f1751d5414a3860b280d6435"
+  },
+  {
+    "source": "community - 副本/image/点赞-填充.png",
+    "published": "originals/community - 副本/image/点赞-填充.png",
+    "sha256": "a4b65ba36077690e78c3f1f9ae6d51b221ffd4545d54f4502ca93a329ce1d19b"
+  },
+  {
+    "source": "community - 副本/index.html",
+    "published": "originals/community - 副本/index.html",
+    "sha256": "ecdb7fef3ad12b7eb4da3266e288d971654f8e0253821bce49a9cc87533355f5"
+  },
+  {
+    "source": "community - 副本 (2)/css/base.css",
+    "published": "originals/community - 副本 (2)/css/base.css",
+    "sha256": "bd87ea15b1086ed39a19d1ace08378d754ef15e1ff17e926d32ebacf78c44977"
+  },
+  {
+    "source": "community - 副本 (2)/css/index.css",
+    "published": "originals/community - 副本 (2)/css/index.css",
+    "sha256": "ff7510e4a72c82a73662bb5e84b6bdabce483dd2aa557d95afda1139ed33cf8d"
+  },
+  {
+    "source": "community - 副本 (2)/image/104696295_p0.png",
+    "published": "originals/community - 副本 (2)/image/104696295_p0.png",
+    "sha256": "b4a275cc650c266c15d0a9432fbd7bf63209539647ae66bbe5740480570a223b"
+  },
+  {
+    "source": "community - 副本 (2)/image/117661040_p4.png",
+    "published": "originals/community - 副本 (2)/image/117661040_p4.png",
+    "sha256": "b09cc76f8d81c01ddf87d5be8da41a9b13710dbbff72a335b904baecf449c7b8"
+  },
+  {
+    "source": "community - 副本 (2)/image/118098344_p1.jpg",
+    "published": "originals/community - 副本 (2)/image/118098344_p1.jpg",
+    "sha256": "2121fce59fcc2f2c819cc61821ed7887052e730cd0f36cd71b3314bf08ca4dbc"
+  },
+  {
+    "source": "community - 副本 (2)/image/1信息.png",
+    "published": "originals/community - 副本 (2)/image/1信息.png",
+    "sha256": "187b39048d682898cdf5016b004b3e774f71ea01a559d1056d4cac3cda3af20f"
+  },
+  {
+    "source": "community - 副本 (2)/image/1收藏-填充.png",
+    "published": "originals/community - 副本 (2)/image/1收藏-填充.png",
+    "sha256": "ff114e9955d0acd2fbe3aae04af52c49cb5acc61f1751d5414a3860b280d6435"
+  },
+  {
+    "source": "community - 副本 (2)/image/1点赞-填充.png",
+    "published": "originals/community - 副本 (2)/image/1点赞-填充.png",
+    "sha256": "a4b65ba36077690e78c3f1f9ae6d51b221ffd4545d54f4502ca93a329ce1d19b"
+  },
+  {
+    "source": "community - 副本 (2)/image/book-multiple.svg",
+    "published": "originals/community - 副本 (2)/image/book-multiple.svg",
+    "sha256": "f44abde830dc8f0c3d3c32c1f4214df5476bbd7fdb44acc72c205f8a367f9c5b"
+  },
+  {
+    "source": "community - 副本 (2)/image/ic_archive_24px.svg",
+    "published": "originals/community - 副本 (2)/image/ic_archive_24px.svg",
+    "sha256": "f70b07b6a77c62ffb37b2d4f41b658e8f2790c6872acd6be70fc1f35c7fe9852"
+  },
+  {
+    "source": "community - 副本 (2)/image/ic_home_24px.svg",
+    "published": "originals/community - 副本 (2)/image/ic_home_24px.svg",
+    "sha256": "7293fd19a661ecd829d370065c04f7fec537678e26a311e53769f806f77c463d"
+  },
+  {
+    "source": "community - 副本 (2)/image/ic_person_24px.svg",
+    "published": "originals/community - 副本 (2)/image/ic_person_24px.svg",
+    "sha256": "2f5c7f7e7730c36134663c00a3c29ff896598f860c885d792eba089d9393ec52"
+  },
+  {
+    "source": "community - 副本 (2)/image/information.svg",
+    "published": "originals/community - 副本 (2)/image/information.svg",
+    "sha256": "8730f33b4a55a0f969ff032bad1fc5e01d022d76afecde549c216ead37ab78e7"
+  },
+  {
+    "source": "community - 副本 (2)/image/school (1).svg",
+    "published": "originals/community - 副本 (2)/image/school (1).svg",
+    "sha256": "c52efabaf81069e597261cabf29865fac681f737072c71befe3a8b349387728b"
+  },
+  {
+    "source": "community - 副本 (2)/image/信息.png",
+    "published": "originals/community - 副本 (2)/image/信息.png",
+    "sha256": "e70957ebf6c79c5549b46c57e4c853de6f622c495c558d12d47c746233bba73d"
+  },
+  {
+    "source": "community - 副本 (2)/image/回到顶部.png",
+    "published": "originals/community - 副本 (2)/image/回到顶部.png",
+    "sha256": "fce4df245f51e02c61a2c9dd8d71ba3653f2b91d4abdeed4feaba49663b058b1"
+  },
+  {
+    "source": "community - 副本 (2)/image/屏幕截图 2025-02-21 135114.png",
+    "published": "originals/community - 副本 (2)/image/屏幕截图 2025-02-21 135114.png",
+    "sha256": "109562ebd18d6353f96b3464648f8f6a64df1f9100c1434461fd451417cc1cce"
+  },
+  {
+    "source": "community - 副本 (2)/image/收藏.png",
+    "published": "originals/community - 副本 (2)/image/收藏.png",
+    "sha256": "9ecb5739a718c25f024e93e22fe8f7856b541950489565fa92c4e6c2e887996e"
+  },
+  {
+    "source": "community - 副本 (2)/image/点赞.png",
+    "published": "originals/community - 副本 (2)/image/点赞.png",
+    "sha256": "d31c73cc9a17083db3ea7eee49d22fd2a9437d0ee2d70eea76928aaec02af19a"
+  },
+  {
+    "source": "community - 副本 (2)/image/编辑.png",
+    "published": "originals/community - 副本 (2)/image/编辑.png",
+    "sha256": "33e7c664cfc3bf668571717144514c29929392a889f2caf1ab00e1c9530ef066"
+  },
+  {
+    "source": "community - 副本 (2)/image/顶置.png",
+    "published": "originals/community - 副本 (2)/image/顶置.png",
+    "sha256": "8a88ac440965ecddd6f878925d7aabe02ec045e62a74521f6165e4c5d0d31e52"
+  },
+  {
+    "source": "community - 副本 (2)/index.html",
+    "published": "originals/community - 副本 (2)/index.html",
+    "sha256": "960dc8639dc793e30b0a19a3611fac9fc5f4cafb81b8e044c13d015c4716e5d8"
+  },
+  {
+    "source": "Home-2/css/base.css",
+    "published": "originals/Home-2/css/base.css",
+    "sha256": "bd87ea15b1086ed39a19d1ace08378d754ef15e1ff17e926d32ebacf78c44977"
+  },
+  {
+    "source": "Home-2/css/index.css",
+    "published": "originals/Home-2/css/index.css",
+    "sha256": "a6774243d6161818d5d45747e907e734ba827f8ca8cb707847e3ce931726f5ae"
+  },
+  {
+    "source": "Home-2/image/104696295_p0.png",
+    "published": "originals/Home-2/image/104696295_p0.png",
+    "sha256": "b4a275cc650c266c15d0a9432fbd7bf63209539647ae66bbe5740480570a223b"
+  },
+  {
+    "source": "Home-2/image/107090500_p0.jpg",
+    "published": "originals/Home-2/image/107090500_p0.jpg",
+    "sha256": "df146b7518ceccbfc99a84d231fee8673365256e6e284046a75e900b404b7255"
+  },
+  {
+    "source": "Home-2/image/107957401_p0.jpg",
+    "published": "originals/Home-2/image/107957401_p0.jpg",
+    "sha256": "2812b93c9e7d85cb83ad3e000cb2d43980f0320dbf754420ca3116266ce3be01"
+  },
+  {
+    "source": "Home-2/image/book-multiple.svg",
+    "published": "originals/Home-2/image/book-multiple.svg",
+    "sha256": "f44abde830dc8f0c3d3c32c1f4214df5476bbd7fdb44acc72c205f8a367f9c5b"
+  },
+  {
+    "source": "Home-2/image/ic_archive_24px.svg",
+    "published": "originals/Home-2/image/ic_archive_24px.svg",
+    "sha256": "f70b07b6a77c62ffb37b2d4f41b658e8f2790c6872acd6be70fc1f35c7fe9852"
+  },
+  {
+    "source": "Home-2/image/ic_home_24px.svg",
+    "published": "originals/Home-2/image/ic_home_24px.svg",
+    "sha256": "7293fd19a661ecd829d370065c04f7fec537678e26a311e53769f806f77c463d"
+  },
+  {
+    "source": "Home-2/image/ic_person_24px.svg",
+    "published": "originals/Home-2/image/ic_person_24px.svg",
+    "sha256": "2f5c7f7e7730c36134663c00a3c29ff896598f860c885d792eba089d9393ec52"
+  },
+  {
+    "source": "Home-2/image/information.svg",
+    "published": "originals/Home-2/image/information.svg",
+    "sha256": "8730f33b4a55a0f969ff032bad1fc5e01d022d76afecde549c216ead37ab78e7"
+  },
+  {
+    "source": "Home-2/image/minecraft.svg",
+    "published": "originals/Home-2/image/minecraft.svg",
+    "sha256": "a109ee76f220d24e48c8e4eba6373002dc49615d7561e56753f6cbac3ed5d874"
+  },
+  {
+    "source": "Home-2/image/school (1).svg",
+    "published": "originals/Home-2/image/school (1).svg",
+    "sha256": "c52efabaf81069e597261cabf29865fac681f737072c71befe3a8b349387728b"
+  },
+  {
+    "source": "Home-2/index.html",
+    "published": "originals/Home-2/index.html",
+    "sha256": "3b168d70d4425d09fdc476bf23182e3dde61c65ea45ccb24f9be4e5a78fc6bfd"
+  },
+  {
+    "source": "material-theme/css/dark-hc.css",
+    "published": "originals/material-theme/css/dark-hc.css",
+    "sha256": "9e595eab0eb316d4cbf7f864fea4c922a6ae5216e869d3643385d3a17cf20a80"
+  },
+  {
+    "source": "material-theme/css/dark-mc.css",
+    "published": "originals/material-theme/css/dark-mc.css",
+    "sha256": "e779e8c41e258c6415e313c07ab9d8976898f44c3be18bb73e203d4551191811"
+  },
+  {
+    "source": "material-theme/css/dark.css",
+    "published": "originals/material-theme/css/dark.css",
+    "sha256": "b885d0466004156ebcc62f0736512dab486b0c0c9037c7365e06ee54fffc268e"
+  },
+  {
+    "source": "material-theme/css/light-hc.css",
+    "published": "originals/material-theme/css/light-hc.css",
+    "sha256": "c4dcf2af8e88fa22e362f2fa99cbeeccfcde314995d5d68db9933b5efafda509"
+  },
+  {
+    "source": "material-theme/css/light-mc.css",
+    "published": "originals/material-theme/css/light-mc.css",
+    "sha256": "6775748ffad194f12ac68bba7d77cc976bc69874f29d586869e270946892a5ce"
+  },
+  {
+    "source": "material-theme/css/light.css",
+    "published": "originals/material-theme/css/light.css",
+    "sha256": "6e20f5c241254d2b640749f098c19ecb60087d961062b847e2d5d1292417c590"
+  },
+  {
+    "source": "New/css/base.css",
+    "published": "originals/New/css/base.css",
+    "sha256": "bd87ea15b1086ed39a19d1ace08378d754ef15e1ff17e926d32ebacf78c44977"
+  },
+  {
+    "source": "New/css/index.css",
+    "published": "originals/New/css/index.css",
+    "sha256": "97d0e61da4abcec8c9011bbf06fee255349d5ad98c898f7ed0b8608b01eedc5f"
+  },
+  {
+    "source": "New/index.html",
+    "published": "originals/New/index.html",
+    "sha256": "68deabcb1aab78f0cfb11a00542c06f6f68820e8c9f1780566abbc77c85f9f3a"
+  },
+  {
+    "source": "New - 副本/css/base.css",
+    "published": "originals/New - 副本/css/base.css",
+    "sha256": "bd87ea15b1086ed39a19d1ace08378d754ef15e1ff17e926d32ebacf78c44977"
+  },
+  {
+    "source": "New - 副本/css/index.css",
+    "published": "originals/New - 副本/css/index.css",
+    "sha256": "d514f8fdb862ae2448890faf32e441106b6f0b4316c0dfa63c1de739469ba456"
+  },
+  {
+    "source": "Newnav/css/base.css",
+    "published": "originals/Newnav/css/base.css",
+    "sha256": "bd87ea15b1086ed39a19d1ace08378d754ef15e1ff17e926d32ebacf78c44977"
+  },
+  {
+    "source": "Newnav/css/index.css",
+    "published": "originals/Newnav/css/index.css",
+    "sha256": "566a4195a1d6c875cdf6e3d5784fba28e49efe11a3ccf5812ce352522486469e"
+  },
+  {
+    "source": "Newnav/image/104696295_p0.png",
+    "published": "originals/Newnav/image/104696295_p0.png",
+    "sha256": "b4a275cc650c266c15d0a9432fbd7bf63209539647ae66bbe5740480570a223b"
+  },
+  {
+    "source": "Newnav/image/book-multiple.svg",
+    "published": "originals/Newnav/image/book-multiple.svg",
+    "sha256": "f44abde830dc8f0c3d3c32c1f4214df5476bbd7fdb44acc72c205f8a367f9c5b"
+  },
+  {
+    "source": "Newnav/image/ic_archive_24px.svg",
+    "published": "originals/Newnav/image/ic_archive_24px.svg",
+    "sha256": "f70b07b6a77c62ffb37b2d4f41b658e8f2790c6872acd6be70fc1f35c7fe9852"
+  },
+  {
+    "source": "Newnav/image/ic_home_24px.svg",
+    "published": "originals/Newnav/image/ic_home_24px.svg",
+    "sha256": "7293fd19a661ecd829d370065c04f7fec537678e26a311e53769f806f77c463d"
+  },
+  {
+    "source": "Newnav/image/ic_person_24px.svg",
+    "published": "originals/Newnav/image/ic_person_24px.svg",
+    "sha256": "2f5c7f7e7730c36134663c00a3c29ff896598f860c885d792eba089d9393ec52"
+  },
+  {
+    "source": "Newnav/image/information.svg",
+    "published": "originals/Newnav/image/information.svg",
+    "sha256": "8730f33b4a55a0f969ff032bad1fc5e01d022d76afecde549c216ead37ab78e7"
+  },
+  {
+    "source": "Newnav/image/school (1).svg",
+    "published": "originals/Newnav/image/school (1).svg",
+    "sha256": "c52efabaf81069e597261cabf29865fac681f737072c71befe3a8b349387728b"
+  },
+  {
+    "source": "Newnav/index.html",
+    "published": "originals/Newnav/index.html",
+    "sha256": "fcc87c9a1e31ec09dd3f964d017b50459abb1653ef2c49926abc4d16c932c1c8"
+  },
+  {
+    "source": "ydgf1.0.0.02/WebApplication1/mainwork/Homepage/Images/1_1440x8103.png",
+    "published": "originals/ydgf1.0.0.02/WebApplication1/mainwork/Homepage/Images/1_1440x8103.png",
+    "sha256": "2810a7e37370558f0d6529bb00878de494a56d190d3103497f96ea486c09577c"
+  },
+  {
+    "source": "ydgf1.0.0.02/WebApplication1/mainwork/Homepage/Images/2_1920x1080.png",
+    "published": "originals/ydgf1.0.0.02/WebApplication1/mainwork/Homepage/Images/2_1920x1080.png",
+    "sha256": "677ea607d4496f791d5a04d0b40f62227ff457b5b7f489c2d5d3bd062f6b6b3d"
+  },
+  {
+    "source": "ydgf1.0.0.02/WebApplication1/mainwork/Homepage/Images/BA_133x83.png",
+    "published": "originals/ydgf1.0.0.02/WebApplication1/mainwork/Homepage/Images/BA_133x83.png",
+    "sha256": "4cd09b1b71060eaa570bd238e76acff8d86b92432a61479a2c31007367ab374a"
+  },
+  {
+    "source": "ydgf1.0.0.02/WebApplication1/mainwork/Homepage/Images/logo_64x64.png",
+    "published": "originals/ydgf1.0.0.02/WebApplication1/mainwork/Homepage/Images/logo_64x64.png",
+    "sha256": "7ad558d3ce0130ed9fe74806d920cc79d7fbe81932006ae648530375a54cc00e"
+  },
+  {
+    "source": "ydgf1.0.0.02/WebApplication1/mainwork/Homepage/Images/log_64x64.png",
+    "published": "originals/ydgf1.0.0.02/WebApplication1/mainwork/Homepage/Images/log_64x64.png",
+    "sha256": "af17400070e6654474519610fa43e49660cc76dcd855de3cf30194c385d25378"
+  },
+  {
+    "source": "Login.aspx",
+    "published": "originals/Login.html",
+    "conversion": "ASPX static view"
+  },
+  {
+    "source": "New - 副本/index.aspx",
+    "published": "originals/New - 副本/index.html",
+    "conversion": "ASPX static view"
+  },
+  {
+    "source": "Register.aspx",
+    "published": "originals/Register.html",
+    "conversion": "ASPX static view"
+  },
+  {
+    "source": "ydgf1.0.0.02/WebApplication1/mainwork/Homepage/Homepage.aspx",
+    "published": "originals/ydgf1.0.0.02/WebApplication1/mainwork/Homepage/Homepage.html",
+    "conversion": "ASPX static view"
+  },
+  {
+    "source": "ydgf1.0.0.02/WebApplication1/mainwork/login_system/Login.aspx",
+    "published": "originals/ydgf1.0.0.02/WebApplication1/mainwork/login_system/Login.html",
+    "conversion": "ASPX static view"
+  },
+  {
+    "source": "ydgf1.0.0.02/WebApplication1/mainwork/login_system/Register.aspx",
+    "published": "originals/ydgf1.0.0.02/WebApplication1/mainwork/login_system/Register.html",
+    "conversion": "ASPX static view"
+  }
+]
