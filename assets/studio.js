@@ -29,6 +29,7 @@ const Studio = (() => {
   let selectedDate=today(),month=new Date().getMonth(),year=new Date().getFullYear(),editNote=null;
   function theme(){const dark=state.theme==='dark'||state.theme==='auto'&&matchMedia('(prefers-color-scheme: dark)').matches;document.body.dataset.theme=dark?'dark':'light';$('#theme-button').textContent=dark?'☀':'☾';$('#theme-button').setAttribute('aria-label',dark?'切换为浅色模式':'切换为深色模式')}
   function home(){
+    if(window.Premium)return window.Premium.home(state);
     const upcoming=state.events.filter(e=>e.date>=today()).sort((a,b)=>(a.date+a.time).localeCompare(b.date+b.time)).slice(0,3);
     const quotes=['慢慢来，每一点进步都算数。','把今天的一小步，走成明天的底气。','给好奇心一点时间，让热爱慢慢生长。','认真生活，也记得抬头看看天空。','今天，也做自己喜欢的那个自己。','所有的出发，都可以从现在开始。','在平凡的日子里，收集一点闪光。'];
     const q=quotes[new Date().getDay()];
@@ -69,7 +70,7 @@ const Studio = (() => {
   function settings(){
     dialog('settings-dialog','留住你的校园手帐','<p class="helper">任务、日程、书签、手帐和专注记录保存在当前浏览器。清理浏览器数据会删除它们；网站不会自动同步到云端或 GitHub。</p><div class="stats-row"><div><strong>'+state.tasks.length+'</strong><span>学习任务</span></div><div><strong>'+state.notes.length+'</strong><span>手帐条目</span></div></div><div class="storage-actions"><button class="btn primary" id="export-data">导出备份</button><button class="btn" id="import-data">导入备份</button><input id="import-file" type="file" accept=".json,application/json" hidden></div><p class="helper">导入会合并新增条目，相同编号不会重复添加。</p><hr style="border:0;border-top:1px solid var(--line);margin:24px 0"><h3>显示偏好</h3><label class="field">页面主题<select id="theme-select"><option value="auto">跟随系统</option><option value="light">浅色 · 晴日</option><option value="dark">深色 · 夜读</option></select></label><p class="helper">快捷键 Ctrl / ⌘ + K：全站查找。Esc：关闭弹窗。</p><a class="section-link" href="#login" data-dialog-link>原版账户入口 ↗</a>');$('#theme-select').value=state.theme;
   }
-  const pages=[['home','首页','校园入口'],['learn','学习自习室','专注计时、任务'],['calendar','校园日历','个人日程'],['resources','资源书架','网盘与书签'],['community','社区','动态与收藏'],['notebook','我的手帐','随手记录'],['about','关于学校','完整历史简介'],['archive','原版网页存档','全部版本'],['login','登录注册','账户界面']];
+  const pages=[['home','首页','校园入口'],['gallery','原图影像','全部原始图片与图标'],['learn','学习自习室','专注计时、任务'],['calendar','校园日历','个人日程'],['resources','资源书架','网盘与书签'],['community','社区','动态与收藏'],['notebook','我的手帐','随手记录'],['about','关于学校','完整历史简介'],['archive','原版网页存档','全部版本'],['login','登录注册','账户界面']];
   function commandResults(q){
     q=q.toLowerCase().trim();
     const results=pages.filter(p=>(p[1]+p[2]).includes(q)).map(p=>({title:p[1],label:p[2],href:'#'+p[0]}));
@@ -92,14 +93,14 @@ const Studio = (() => {
   }
   function route(){
     const [page,query]=location.hash.slice(1).split('?'),p=page||'home';
-    const views={home,learn,calendar,resources,notebook:notes};
+    const views={home,learn,calendar,resources,notebook:notes,gallery:()=>Premium.gallery()};
     if(views[p])main.innerHTML=views[p]();else render();
     document.title=(pages.find(x=>x[0]===p)?.[1]||'广附社区')+' · 广附社区';
     document.querySelectorAll('header nav a').forEach(a=>{a.removeAttribute('aria-current');if(a.hash==='#'+p)a.setAttribute('aria-current','page')});
     if(p==='community'&&query){const id=new URLSearchParams(query).get('post');const post=data.posts.find(x=>String(x.id)===id);if(post){$('#search').value=post.title;$('#search').dispatchEvent(new Event('input'));setTimeout(()=>document.getElementById('post-'+id)?.scrollIntoView({block:'center'}),50)}}
     if(p==='community'){const sidebar=$('.side');if(sidebar)sidebar.insertAdjacentHTML('beforeend','<a href="#notebook">写一页自己的手帐 ↗</a>')}
     if(p==='about')main.querySelector('.wrap').insertAdjacentHTML('beforeend','<section class="banner"><h3>广附社区 · 校园手帐版</h3><p>自习室、个人日程、资源书架和随手记，让校园网陪伴每天的成长。个人工具无需登录，数据保存在本机。</p><button class="btn" data-open-settings>个人数据与备份</button></section>');
-    window.scrollTo(0,0);tick();
+    window.scrollTo(0,0);tick();window.Premium?.enhance(p);
   }
   function refreshTasks(){ $('#task-list').innerHTML=tasksHtml();$('#task-count').textContent=state.tasks.filter(t=>t.done).length+' / '+state.tasks.length+' 已完成'}
   function refreshResources(){ $('#resource-list').innerHTML=linkCards($('#resource-search').value,$('#resource-category').value)}
