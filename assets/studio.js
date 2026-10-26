@@ -3,7 +3,7 @@ const Studio = (() => {
   const key='aweb-studio-v2', $=s=>document.querySelector(s);
   const uid=()=>crypto.randomUUID?crypto.randomUUID():Date.now().toString(36)+Math.random().toString(36).slice(2);
   const dateKey=(d=new Date())=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
-  const empty=()=>({version:2,tasks:[],events:[],links:[],notes:[],sessions:[],courses:[],exams:[],cards:[],theme:'auto',timer:{mode:25,remaining:1500,end:null}});
+  const empty=()=>({version:2,tasks:[],events:[],links:[],notes:[],sessions:[],courses:[],exams:[],cards:[],communityPosts:[],communityComments:[],communityMarks:[],theme:'auto',timer:{mode:25,remaining:1500,end:null}});
   const safeUrl=u=>{try{const x=new URL(u);return ['https:','http:'].includes(x.protocol)?x.href:null}catch{return null}};
   const text=(x,max)=>typeof x==='string'?x.slice(0,max):'';
   function validate(raw){
@@ -20,6 +20,7 @@ const Studio = (() => {
     s.courses=list('courses').filter(x=>x&&typeof x.title==='string'&&Number.isInteger(x.weekday)&&x.weekday>=1&&x.weekday<=7&&validTime(x.start)&&validTime(x.end)&&x.start<x.end).map(x=>({id:safeId(x.id),title:text(x.title,160),weekday:x.weekday,start:x.start,end:x.end,location:text(x.location,160)}));
     s.exams=list('exams').filter(x=>x&&typeof x.title==='string'&&validDate(x.date)).map(x=>({id:safeId(x.id),title:text(x.title,160),date:x.date,subject:text(x.subject,40),note:text(x.note,500)}));
     s.cards=list('cards').filter(x=>x&&typeof x.front==='string'&&typeof x.back==='string').map(x=>({id:safeId(x.id),front:text(x.front,1500),back:text(x.back,3000),subject:text(x.subject,40),due:validDate(x.due)?x.due:dateKey(),reviews:Number.isFinite(x.reviews)?Math.max(0,Math.min(1000000,Math.floor(x.reviews))):0,lastReviewed:validDate(x.lastReviewed)?x.lastReviewed:''}));
+    Object.assign(s,Community.validate(raw));
     s.theme=['light','dark','auto'].includes(raw.theme)?raw.theme:'auto';
     if(raw.timer&&[5,25,50].includes(raw.timer.mode)){const t=raw.timer;s.timer={mode:t.mode,remaining:Math.max(0,Math.min(t.mode*60,Number(t.remaining)||0)),end:Number.isFinite(t.end)&&t.end>0&&t.end<Date.now()+3600000?t.end:null}}
     return s;
@@ -99,14 +100,13 @@ const Studio = (() => {
   }
   function route(){
     const [page,query]=location.hash.slice(1).split('?'),p=page||'home';
-    const views={home,learn,calendar,resources,notebook:notes,gallery:()=>Premium.gallery(),...Workspace.views};
+    const views={home,learn,calendar,resources,notebook:notes,gallery:()=>Premium.gallery(),...Workspace.views,community:()=>Community.render()};
     if(views[p])main.innerHTML=views[p]();else render();
     document.title=(pages.find(x=>x[0]===p)?.[1]||'广附社区')+' · 广附社区';
     document.querySelectorAll('header nav a').forEach(a=>{a.removeAttribute('aria-current');if(a.hash==='#'+p)a.setAttribute('aria-current','page')});
-    if(p==='community'&&query){const id=new URLSearchParams(query).get('post');const post=data.posts.find(x=>String(x.id)===id);if(post){$('#search').value=post.title;$('#search').dispatchEvent(new Event('input'));setTimeout(()=>document.getElementById('post-'+id)?.scrollIntoView({block:'center'}),50)}}
     if(p==='community'){const sidebar=$('.side');if(sidebar)sidebar.insertAdjacentHTML('beforeend','<a href="#notebook">写一页自己的手帐 ↗</a>')}
     if(p==='about')main.querySelector('.wrap').insertAdjacentHTML('beforeend','<section class="banner"><h3>广附社区 · 校园手帐版</h3><p>自习室、个人日程、资源书架和随手记，让校园网陪伴每天的成长。个人工具无需登录，数据保存在本机。</p><button class="btn" data-open-settings>个人数据与备份</button></section>');
-    window.scrollTo(0,0);tick();window.Premium?.enhance(p);window.Workspace?.enhance(p);
+    window.scrollTo(0,0);tick();window.Premium?.enhance(p);window.Workspace?.enhance(p);window.Community?.enhance(p);
   }
   function refreshTasks(){ $('#task-list').innerHTML=tasksHtml();$('#task-count').textContent=state.tasks.filter(t=>t.done).length+' / '+state.tasks.length+' 已完成'}
   function refreshResources(){ $('#resource-list').innerHTML=linkCards($('#resource-search').value,$('#resource-category').value)}
@@ -163,7 +163,7 @@ const Studio = (() => {
       try{
         if(file.size>2000000)throw Error('备份文件不能超过 2 MB');
         const raw=JSON.parse(await file.text()),incoming=validate(raw);
-        const merged={...state};for(const name of ['tasks','events','links','notes','sessions','courses','exams','cards']){const ids=new Set(state[name].map(x=>x.id));const additions=incoming[name].filter(x=>{if(ids.has(x.id))return false;ids.add(x.id);return true});merged[name]=[...state[name],...additions];if(merged[name].length>5000)throw Error('合并后单个分类超过 5,000 条');}state=merged;
+        const merged={...state};for(const name of ['tasks','events','links','notes','sessions','courses','exams','cards','communityPosts','communityComments','communityMarks']){const ids=new Set(state[name].map(x=>x.id));const additions=incoming[name].filter(x=>{if(ids.has(x.id))return false;ids.add(x.id);return true});merged[name]=[...state[name],...additions];if(merged[name].length>5000)throw Error('合并后单个分类超过 5,000 条');}state=merged;
         if(Array.isArray(raw.favorites)){saves=[...new Set([...saves,...raw.favorites.filter(id=>data.posts.some(p=>p.id===id))])];try{localStorage.setItem('aweb-saves',JSON.stringify(saves))}catch{}}
         save();$('#settings-dialog').close();route();toast('备份已合并，原有内容保留');
       }catch(err){toast('导入失败：'+err.message)}e.target.value='';
@@ -174,6 +174,7 @@ const Studio = (() => {
   matchMedia('(prefers-color-scheme: dark)').addEventListener('change',()=>{if(state.theme==='auto')theme()});
   window.addEventListener('hashchange',()=>{route();main.focus({preventScroll:true})});
   document.querySelector('.skip').addEventListener('click',e=>{e.preventDefault();main.focus();main.scrollIntoView()});
+  Community.init({getState:()=>state,save,route,toast});
   Workspace.init({getState:()=>state,save,route,toast});
   setInterval(tick,500);theme();route();
   return {route,validate,safeUrl};
