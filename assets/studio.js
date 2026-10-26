@@ -3,7 +3,7 @@ const Studio = (() => {
   const key='aweb-studio-v2', $=s=>document.querySelector(s);
   const uid=()=>crypto.randomUUID?crypto.randomUUID():Date.now().toString(36)+Math.random().toString(36).slice(2);
   const dateKey=(d=new Date())=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
-  const empty=()=>({version:2,tasks:[],events:[],links:[],notes:[],sessions:[],theme:'auto',timer:{mode:25,remaining:1500,end:null}});
+  const empty=()=>({version:2,tasks:[],events:[],links:[],notes:[],sessions:[],courses:[],exams:[],cards:[],theme:'auto',timer:{mode:25,remaining:1500,end:null}});
   const safeUrl=u=>{try{const x=new URL(u);return ['https:','http:'].includes(x.protocol)?x.href:null}catch{return null}};
   const text=(x,max)=>typeof x==='string'?x.slice(0,max):'';
   function validate(raw){
@@ -14,6 +14,12 @@ const Studio = (() => {
     s.links=list('links').filter(x=>x&&safeUrl(x.url)&&typeof x.title==='string').map(x=>({id:text(x.id,100)||uid(),title:text(x.title,100),url:safeUrl(x.url),category:text(x.category,30)||'其他',description:text(x.description,240)}));
     s.notes=list('notes').filter(x=>x&&typeof x.body==='string').map(x=>({id:text(x.id,100)||uid(),body:text(x.body,3000),date:text(x.date,10)}));
     s.sessions=list('sessions').filter(x=>x&&typeof x.date==='string'&&Number.isFinite(x.minutes)&&x.minutes>0&&x.minutes<=60).map(x=>({id:text(x.id,100)||uid(),date:text(x.date,10),minutes:x.minutes}));
+    const validDate=d=>typeof d==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(d)&&!Number.isNaN(Date.parse(d+'T00:00:00Z'))&&new Date(d+'T00:00:00Z').toISOString().slice(0,10)===d;
+    const validTime=t=>typeof t==='string'&&/^([01]\d|2[0-3]):[0-5]\d$/.test(t);
+    const safeId=id=>typeof id==='string'&&/^[A-Za-z0-9_-]{1,100}$/.test(id)?id:uid();
+    s.courses=list('courses').filter(x=>x&&typeof x.title==='string'&&Number.isInteger(x.weekday)&&x.weekday>=1&&x.weekday<=7&&validTime(x.start)&&validTime(x.end)&&x.start<x.end).map(x=>({id:safeId(x.id),title:text(x.title,160),weekday:x.weekday,start:x.start,end:x.end,location:text(x.location,160)}));
+    s.exams=list('exams').filter(x=>x&&typeof x.title==='string'&&validDate(x.date)).map(x=>({id:safeId(x.id),title:text(x.title,160),date:x.date,subject:text(x.subject,40),note:text(x.note,500)}));
+    s.cards=list('cards').filter(x=>x&&typeof x.front==='string'&&typeof x.back==='string').map(x=>({id:safeId(x.id),front:text(x.front,1500),back:text(x.back,3000),subject:text(x.subject,40),due:validDate(x.due)?x.due:dateKey(),reviews:Number.isFinite(x.reviews)?Math.max(0,Math.min(1000000,Math.floor(x.reviews))):0,lastReviewed:validDate(x.lastReviewed)?x.lastReviewed:''}));
     s.theme=['light','dark','auto'].includes(raw.theme)?raw.theme:'auto';
     if(raw.timer&&[5,25,50].includes(raw.timer.mode)){const t=raw.timer;s.timer={mode:t.mode,remaining:Math.max(0,Math.min(t.mode*60,Number(t.remaining)||0)),end:Number.isFinite(t.end)&&t.end>0&&t.end<Date.now()+3600000?t.end:null}}
     return s;
@@ -68,9 +74,9 @@ const Studio = (() => {
     const d=$('#'+id);d.innerHTML='<div class="dialog-inner"><div class="dialog-head"><h2>'+title+'</h2><button class="icon-btn" data-close aria-label="关闭">×</button></div>'+body+'</div>';d.showModal();
   }
   function settings(){
-    dialog('settings-dialog','留住你的校园手帐','<p class="helper">任务、日程、书签、手帐和专注记录保存在当前浏览器。清理浏览器数据会删除它们；网站不会自动同步到云端或 GitHub。</p><div class="stats-row"><div><strong>'+state.tasks.length+'</strong><span>学习任务</span></div><div><strong>'+state.notes.length+'</strong><span>手帐条目</span></div></div><div class="storage-actions"><button class="btn primary" id="export-data">导出备份</button><button class="btn" id="import-data">导入备份</button><input id="import-file" type="file" accept=".json,application/json" hidden></div><p class="helper">导入会合并新增条目，相同编号不会重复添加。</p><hr style="border:0;border-top:1px solid var(--line);margin:24px 0"><h3>显示偏好</h3><label class="field">页面主题<select id="theme-select"><option value="auto">跟随系统</option><option value="light">浅色 · 晴日</option><option value="dark">深色 · 夜读</option></select></label><p class="helper">快捷键 Ctrl / ⌘ + K：全站查找。Esc：关闭弹窗。</p><a class="section-link" href="#login" data-dialog-link>原版账户入口 ↗</a>');$('#theme-select').value=state.theme;
+    dialog('settings-dialog','留住你的校园手帐','<p class="helper">任务、日程、书签、手帐、专注记录、课程表、考试目标和复习卡片保存在当前浏览器。清理浏览器数据会删除它们；网站不会自动同步到云端或 GitHub。</p><div class="stats-row"><div><strong>'+state.tasks.length+'</strong><span>学习任务</span></div><div><strong>'+state.notes.length+'</strong><span>手帐条目</span></div></div><div class="storage-actions"><button class="btn primary" id="export-data">导出备份</button><button class="btn" id="import-data">导入备份</button><input id="import-file" type="file" accept=".json,application/json" hidden></div><p class="helper">导入会合并新增条目，相同编号不会重复添加。</p><hr style="border:0;border-top:1px solid var(--line);margin:24px 0"><h3>显示偏好</h3><label class="field">页面主题<select id="theme-select"><option value="auto">跟随系统</option><option value="light">浅色 · 晴日</option><option value="dark">深色 · 夜读</option></select></label><p class="helper">快捷键 Ctrl / ⌘ + K：全站查找。Esc：关闭弹窗。</p><a class="section-link" href="#login" data-dialog-link>原版账户入口 ↗</a>');$('#theme-select').value=state.theme;
   }
-  const pages=[['home','首页','校园入口'],['gallery','原图影像','全部原始图片与图标'],['learn','学习自习室','专注计时、任务'],['calendar','校园日历','个人日程'],['resources','资源书架','网盘与书签'],['community','社区','动态与收藏'],['notebook','我的手帐','随手记录'],['about','关于学校','完整历史简介'],['archive','原版网页存档','全部版本'],['login','登录注册','账户界面']];
+  const pages=[['home','首页','校园入口'],['dashboard','学习工作台','统计与今日课程'],['timetable','课程表','每周安排与冲突检查'],['countdown','考试倒计时','目标与剩余天数'],['flashcards','复习卡片','问答与间隔复习'],['gallery','原图影像','全部原始图片与图标'],['learn','学习自习室','专注计时、任务'],['calendar','校园日历','个人日程'],['resources','资源书架','网盘与书签'],['community','社区','动态与收藏'],['notebook','我的手帐','随手记录'],['about','关于学校','完整历史简介'],['archive','原版网页存档','全部版本'],['login','登录注册','账户界面']];
   function commandResults(q){
     q=q.toLowerCase().trim();
     const results=pages.filter(p=>(p[1]+p[2]).includes(q)).map(p=>({title:p[1],label:p[2],href:'#'+p[0]}));
@@ -93,14 +99,14 @@ const Studio = (() => {
   }
   function route(){
     const [page,query]=location.hash.slice(1).split('?'),p=page||'home';
-    const views={home,learn,calendar,resources,notebook:notes,gallery:()=>Premium.gallery()};
+    const views={home,learn,calendar,resources,notebook:notes,gallery:()=>Premium.gallery(),...Workspace.views};
     if(views[p])main.innerHTML=views[p]();else render();
     document.title=(pages.find(x=>x[0]===p)?.[1]||'广附社区')+' · 广附社区';
     document.querySelectorAll('header nav a').forEach(a=>{a.removeAttribute('aria-current');if(a.hash==='#'+p)a.setAttribute('aria-current','page')});
     if(p==='community'&&query){const id=new URLSearchParams(query).get('post');const post=data.posts.find(x=>String(x.id)===id);if(post){$('#search').value=post.title;$('#search').dispatchEvent(new Event('input'));setTimeout(()=>document.getElementById('post-'+id)?.scrollIntoView({block:'center'}),50)}}
     if(p==='community'){const sidebar=$('.side');if(sidebar)sidebar.insertAdjacentHTML('beforeend','<a href="#notebook">写一页自己的手帐 ↗</a>')}
     if(p==='about')main.querySelector('.wrap').insertAdjacentHTML('beforeend','<section class="banner"><h3>广附社区 · 校园手帐版</h3><p>自习室、个人日程、资源书架和随手记，让校园网陪伴每天的成长。个人工具无需登录，数据保存在本机。</p><button class="btn" data-open-settings>个人数据与备份</button></section>');
-    window.scrollTo(0,0);tick();window.Premium?.enhance(p);
+    window.scrollTo(0,0);tick();window.Premium?.enhance(p);window.Workspace?.enhance(p);
   }
   function refreshTasks(){ $('#task-list').innerHTML=tasksHtml();$('#task-count').textContent=state.tasks.filter(t=>t.done).length+' / '+state.tasks.length+' 已完成'}
   function refreshResources(){ $('#resource-list').innerHTML=linkCards($('#resource-search').value,$('#resource-category').value)}
@@ -157,7 +163,7 @@ const Studio = (() => {
       try{
         if(file.size>2000000)throw Error('备份文件不能超过 2 MB');
         const raw=JSON.parse(await file.text()),incoming=validate(raw);
-        const merged={...state};for(const name of ['tasks','events','links','notes','sessions']){const ids=new Set(state[name].map(x=>x.id));const additions=incoming[name].filter(x=>{if(ids.has(x.id))return false;ids.add(x.id);return true});merged[name]=[...state[name],...additions];if(merged[name].length>5000)throw Error('合并后单个分类超过 5,000 条');}state=merged;
+        const merged={...state};for(const name of ['tasks','events','links','notes','sessions','courses','exams','cards']){const ids=new Set(state[name].map(x=>x.id));const additions=incoming[name].filter(x=>{if(ids.has(x.id))return false;ids.add(x.id);return true});merged[name]=[...state[name],...additions];if(merged[name].length>5000)throw Error('合并后单个分类超过 5,000 条');}state=merged;
         if(Array.isArray(raw.favorites)){saves=[...new Set([...saves,...raw.favorites.filter(id=>data.posts.some(p=>p.id===id))])];try{localStorage.setItem('aweb-saves',JSON.stringify(saves))}catch{}}
         save();$('#settings-dialog').close();route();toast('备份已合并，原有内容保留');
       }catch(err){toast('导入失败：'+err.message)}e.target.value='';
@@ -168,6 +174,7 @@ const Studio = (() => {
   matchMedia('(prefers-color-scheme: dark)').addEventListener('change',()=>{if(state.theme==='auto')theme()});
   window.addEventListener('hashchange',()=>{route();main.focus({preventScroll:true})});
   document.querySelector('.skip').addEventListener('click',e=>{e.preventDefault();main.focus();main.scrollIntoView()});
+  Workspace.init({getState:()=>state,save,route,toast});
   setInterval(tick,500);theme();route();
   return {route,validate,safeUrl};
 })();
