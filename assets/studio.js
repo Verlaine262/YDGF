@@ -106,7 +106,7 @@ const Studio = (() => {
     document.querySelectorAll('header nav a').forEach(a=>{a.removeAttribute('aria-current');if(a.hash==='#'+p)a.setAttribute('aria-current','page')});
     if(p==='community'){const sidebar=$('.side');if(sidebar)sidebar.insertAdjacentHTML('beforeend','<a href="#notebook">写一页自己的手帐 ↗</a>')}
     if(p==='about')main.querySelector('.wrap').insertAdjacentHTML('beforeend','<section class="banner"><h3>广附社区 · 校园手帐版</h3><p>自习室、个人日程、资源书架和随手记，让校园网陪伴每天的成长。个人工具无需登录，数据保存在本机。</p><button class="btn" data-open-settings>个人数据与备份</button></section>');
-    window.scrollTo(0,0);tick();window.Premium?.enhance(p);window.Workspace?.enhance(p);window.Community?.enhance(p);
+    window.scrollTo({top:0,behavior:"instant"});tick();window.Premium?.enhance(p);window.Workspace?.enhance(p);window.Community?.enhance(p);window.CampusMotion?.enter(p);
   }
   function refreshTasks(){ $('#task-list').innerHTML=tasksHtml();$('#task-count').textContent=state.tasks.filter(t=>t.done).length+' / '+state.tasks.length+' 已完成'}
   function refreshResources(){ $('#resource-list').innerHTML=linkCards($('#resource-search').value,$('#resource-category').value)}
