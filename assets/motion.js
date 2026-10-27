@@ -3,7 +3,7 @@ window.CampusMotion=(()=>{
   const reduced=matchMedia('(prefers-reduced-motion: reduce)');
   let enabled=true,frame=0,routeFrame=0,lastPage='',observer,ambientObserver;
   const seen=new WeakSet(),running=new Set(),pending=new Set();
-  const targets='.page-heading,.cm-hero,.cm-pinned,.cm-side-card,.post,.cm-card,.panel,.gallery-card,.atelier,.image-feature,.collection-heading,.closing-frame,.workspace-home-banner,.course-card,.exam-card,.flashcard,.cinema-title,.hero-original,.cm-toolbar,.workspace-tabs';
+  const targets='.letters-hero,.letters-chapter,.letters-home-banner,.page-heading,.cm-hero,.cm-pinned,.cm-side-card,.post,.cm-card,.panel,.gallery-card,.atelier,.image-feature,.collection-heading,.closing-frame,.workspace-home-banner,.course-card,.exam-card,.flashcard,.cinema-title,.hero-original,.cm-toolbar,.workspace-tabs';
   try{enabled=localStorage.getItem('aweb-motion')!=='off'}catch{}
   const allowed=()=>enabled&&!reduced.matches;
   function animate(el,frames,options){if(!allowed()||!el.animate||!el.isConnected)return;const animation=el.animate(frames,options);running.add(animation);animation.finished.catch(()=>{}).finally(()=>running.delete(animation));return animation;}
