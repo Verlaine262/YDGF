@@ -4,7 +4,7 @@ window.CampusMotion=(()=>{
   let enabled=true,frame=0,routeFrame=0,lastPage='',observer,ambientObserver;
   const seen=new WeakSet(),running=new Set(),pending=new Set(),channels=new WeakMap(),watchedDialogs=new WeakSet();
   const ease="cubic-bezier(.16,1,.3,1)";
-  const targets='.plus-lab-hero,.plus-tool-index,.plus-work,.resource-card,.todo-item,.event-line,.note-card,.archive-list>a,.journal-colophon,.journal-note,.journal-hero,.journal-photo-grid figure,.letters-hero,.letters-chapter,.letters-home-banner,.page-heading,.cm-hero,.cm-pinned,.cm-side-card,.post,.cm-card,.panel,.gallery-card,.atelier,.image-feature,.collection-heading,.closing-frame,.workspace-home-banner,.course-card,.exam-card,.flashcard,.cinema-title,.hero-original,.cm-toolbar,.workspace-tabs';
+  const targets='.cm-editorial-grid>button,.cm-related,.plus-lab-hero,.plus-tool-index,.plus-work,.resource-card,.todo-item,.event-line,.note-card,.archive-list>a,.journal-colophon,.journal-note,.journal-hero,.journal-photo-grid figure,.letters-hero,.letters-chapter,.letters-home-banner,.page-heading,.cm-hero,.cm-pinned,.cm-side-card,.post,.cm-card,.panel,.gallery-card,.atelier,.image-feature,.collection-heading,.closing-frame,.workspace-home-banner,.course-card,.exam-card,.flashcard,.cinema-title,.hero-original,.cm-toolbar,.workspace-tabs';
   try{enabled=localStorage.getItem('aweb-motion')!=='off'}catch{}
   const allowed=()=>enabled&&!reduced.matches;
   function animate(el,frames,options){if(!allowed()||!el.animate||!el.isConnected)return;channels.get(el)?.cancel();const animation=el.animate(frames,options);channels.set(el,animation);running.add(animation);animation.finished.catch(()=>{}).finally(()=>running.delete(animation));return animation;}
