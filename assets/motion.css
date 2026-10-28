@@ -31,3 +31,37 @@ body.motion-off *,body.motion-off *::before,body.motion-off *::after{animation:n
 body.motion-off .reveal{opacity:1!important;transform:none!important}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1!important;transform:none!important}}
 @media(max-width:650px){#motion-button{width:30px;height:30px}.header-tools{gap:5px}}
+/* Motion refinement: consistent timing and restrained tactile feedback. */
+:root{--motion-ease:cubic-bezier(.16,1,.3,1);--motion-fast:180ms;--motion-medium:360ms}
+.motion-nav-marker{transition:transform 520ms var(--motion-ease),width 420ms var(--motion-ease),opacity 220ms;box-shadow:0 0 14px #719cff40}.motion-reading-progress{background:linear-gradient(90deg,#7198c8,#a9bfd7,#c6b296);height:2px}
+@media(prefers-reduced-motion:no-preference){
+ body:not(.motion-off) :is(.journal-mode-tabs button,.journal-topics button,.journal-note-footer button,.journal-reply,.memory-controls button,.plus-lab button,#plus-dialog button,#plus-dock a,#plus-dock button,.letters-toolbar button,.official-week-nav button){transition:translate 240ms var(--motion-ease),scale 240ms var(--motion-ease),background-color 250ms,border-color 250ms,color 200ms,box-shadow 300ms}
+ body:not(.motion-off) :is(.plus-lab button,#plus-dialog button,#plus-dock button,.journal-mode-tabs button,.journal-topics button,.journal-note-footer button):active{scale:.97}
+ body:not(.motion-off) :is(.plus-work,.plus-tool-index,.journal-photo-grid figure,.cm-side-card,.panel,.resource-card,.gallery-card){transition:border-color 350ms,box-shadow 450ms,translate 450ms var(--motion-ease)}
+ body:not(.motion-off) :is(input,textarea,select):focus-visible{box-shadow:0 0 0 3px #7b9dc520;border-color:#7b9dc5;outline:1px solid transparent}
+ body:not(.motion-off) :is(button,a):focus-visible{outline:2px solid #92b5de;outline-offset:4px}
+ body:not(.motion-off) :is(.gallery-card,.image-feature) img{transition:scale 900ms var(--motion-ease)}
+ body:not(.motion-off) :is(.journal-photo-grid figure,.plus-result,.cm-guide-link,.archive-list>a){transition:background-color 300ms,border-color 300ms,translate 420ms var(--motion-ease)}
+ body:not(.motion-off) .memory-fragment-link{transition:opacity 380ms,translate 380ms var(--motion-ease);translate:0 3px}
+ body:not(.motion-off) .memory-fragment:is(:hover,:focus-visible) .memory-fragment-link{translate:0 0}
+ body:not(.motion-off) summary{transition:color 220ms}
+ body:not(.motion-off) details[open]>summary{color:#789bc5}
+ body:not(.motion-off) .back-top{transition:translate 350ms var(--motion-ease),background-color 250ms,box-shadow 350ms}
+ body:not(.motion-off) dialog::backdrop{animation:campus-backdrop 360ms ease-out}
+}
+@media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+ body:not(.motion-off) :is(.gallery-card,.image-feature):hover img{scale:1.025}
+ body:not(.motion-off) :is(.plus-result,.cm-guide-link,.archive-list>a):hover{translate:3px 0;background-color:#789bc508}
+ body:not(.motion-off) :is(.plus-work,.plus-tool-index,.panel):hover{border-color:#8aabc54d}
+ body:not(.motion-off) :is(.plus-lab button,#plus-dialog button,#plus-dock button,.journal-topics button):hover{translate:0 -1px}
+ body:not(.motion-off) .back-top:hover{translate:0 -3px;box-shadow:0 9px 25px #23406218}
+}
+@supports(transition-behavior:allow-discrete){
+ @media(prefers-reduced-motion:no-preference){
+ body:not(.motion-off) dialog{opacity:0;transition:opacity 180ms ease,display 180ms allow-discrete,overlay 180ms allow-discrete}
+ body:not(.motion-off) dialog[open]{opacity:1}
+ body:not(.motion-off) dialog::backdrop{background-color:#050c1ab8;transition:background-color 180ms,display 180ms allow-discrete,overlay 180ms allow-discrete}
+ body:not(.motion-off) dialog:not([open])::backdrop{background-color:transparent}
+ }
+}
+@media(max-width:700px){body:not(.motion-off) :is(.btn,.gallery-card,.cm-card,.post):hover{translate:none}}
