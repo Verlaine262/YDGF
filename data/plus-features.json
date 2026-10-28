@@ -1,0 +1,384 @@
+{
+  "version": "20261028-4",
+  "count": 63,
+  "features": [
+    {
+      "id": "calc",
+      "name": "四则表达式",
+      "category": "数学",
+      "entry": "#lab?tool=calc"
+    },
+    {
+      "id": "percent",
+      "name": "百分比计算",
+      "category": "数学",
+      "entry": "#lab?tool=percent"
+    },
+    {
+      "id": "change",
+      "name": "增长率计算",
+      "category": "数学",
+      "entry": "#lab?tool=change"
+    },
+    {
+      "id": "ratio",
+      "name": "比例求解",
+      "category": "数学",
+      "entry": "#lab?tool=ratio"
+    },
+    {
+      "id": "weighted",
+      "name": "加权成绩",
+      "category": "学习",
+      "entry": "#lab?tool=weighted"
+    },
+    {
+      "id": "target",
+      "name": "期末目标分",
+      "category": "学习",
+      "entry": "#lab?tool=target"
+    },
+    {
+      "id": "gpa",
+      "name": "学分加权绩点",
+      "category": "学习",
+      "entry": "#lab?tool=gpa"
+    },
+    {
+      "id": "stats",
+      "name": "描述统计",
+      "category": "数学",
+      "entry": "#lab?tool=stats"
+    },
+    {
+      "id": "linear",
+      "name": "一次方程",
+      "category": "数学",
+      "entry": "#lab?tool=linear"
+    },
+    {
+      "id": "quadratic",
+      "name": "二次方程",
+      "category": "数学",
+      "entry": "#lab?tool=quadratic"
+    },
+    {
+      "id": "gcd",
+      "name": "公约数与公倍数",
+      "category": "数学",
+      "entry": "#lab?tool=gcd"
+    },
+    {
+      "id": "prime",
+      "name": "质数判断",
+      "category": "数学",
+      "entry": "#lab?tool=prime"
+    },
+    {
+      "id": "factor",
+      "name": "质因数分解",
+      "category": "数学",
+      "entry": "#lab?tool=factor"
+    },
+    {
+      "id": "base",
+      "name": "进制转换",
+      "category": "数学",
+      "entry": "#lab?tool=base"
+    },
+    {
+      "id": "unit",
+      "name": "长度质量时间换算",
+      "category": "数学",
+      "entry": "#lab?tool=unit"
+    },
+    {
+      "id": "temp",
+      "name": "温度换算",
+      "category": "数学",
+      "entry": "#lab?tool=temp"
+    },
+    {
+      "id": "pace",
+      "name": "跑步配速",
+      "category": "生活",
+      "entry": "#lab?tool=pace"
+    },
+    {
+      "id": "duration",
+      "name": "时长合计",
+      "category": "时间",
+      "entry": "#lab?tool=duration"
+    },
+    {
+      "id": "dategap",
+      "name": "日期间隔",
+      "category": "时间",
+      "entry": "#lab?tool=dategap"
+    },
+    {
+      "id": "dateadd",
+      "name": "日期推算",
+      "category": "时间",
+      "entry": "#lab?tool=dateadd"
+    },
+    {
+      "id": "weekday",
+      "name": "日期星期查询",
+      "category": "时间",
+      "entry": "#lab?tool=weekday"
+    },
+    {
+      "id": "timezone",
+      "name": "跨时区时间",
+      "category": "时间",
+      "entry": "#lab?tool=timezone"
+    },
+    {
+      "id": "draw",
+      "name": "随机抽签",
+      "category": "生活",
+      "entry": "#lab?tool=draw"
+    },
+    {
+      "id": "groups",
+      "name": "随机分组",
+      "category": "生活",
+      "entry": "#lab?tool=groups"
+    },
+    {
+      "id": "shuffle",
+      "name": "顺序洗牌",
+      "category": "生活",
+      "entry": "#lab?tool=shuffle"
+    },
+    {
+      "id": "dice",
+      "name": "多面骰子",
+      "category": "生活",
+      "entry": "#lab?tool=dice"
+    },
+    {
+      "id": "password",
+      "name": "随机口令生成",
+      "category": "生活",
+      "entry": "#lab?tool=password"
+    },
+    {
+      "id": "textcount",
+      "name": "字数与阅读时长",
+      "category": "文本",
+      "entry": "#lab?tool=textcount"
+    },
+    {
+      "id": "clean",
+      "name": "空白整理",
+      "category": "文本",
+      "entry": "#lab?tool=clean"
+    },
+    {
+      "id": "dedup",
+      "name": "逐行去重",
+      "category": "文本",
+      "entry": "#lab?tool=dedup"
+    },
+    {
+      "id": "sort",
+      "name": "自然排序",
+      "category": "文本",
+      "entry": "#lab?tool=sort"
+    },
+    {
+      "id": "frequency",
+      "name": "词频统计",
+      "category": "文本",
+      "entry": "#lab?tool=frequency"
+    },
+    {
+      "id": "urls",
+      "name": "提取网页链接",
+      "category": "文本",
+      "entry": "#lab?tool=urls"
+    },
+    {
+      "id": "json",
+      "name": "JSON 校验与格式化",
+      "category": "文本",
+      "entry": "#lab?tool=json"
+    },
+    {
+      "id": "csv",
+      "name": "CSV 转 JSON",
+      "category": "文本",
+      "entry": "#lab?tool=csv"
+    },
+    {
+      "id": "urlcode",
+      "name": "URL 编解码",
+      "category": "文本",
+      "entry": "#lab?tool=urlcode"
+    },
+    {
+      "id": "base64",
+      "name": "Base64 编解码",
+      "category": "文本",
+      "entry": "#lab?tool=base64"
+    },
+    {
+      "id": "compare",
+      "name": "逐行文本比较",
+      "category": "文本",
+      "entry": "#lab?tool=compare"
+    },
+    {
+      "id": "contrast",
+      "name": "颜色对比度",
+      "category": "设计",
+      "entry": "#lab?tool=contrast"
+    },
+    {
+      "id": "budget",
+      "name": "预算结余",
+      "category": "生活",
+      "entry": "#lab?tool=budget"
+    },
+    {
+      "id": "split",
+      "name": "AA 分账",
+      "category": "生活",
+      "entry": "#lab?tool=split"
+    },
+    {
+      "id": "savings",
+      "name": "目标储蓄周期",
+      "category": "生活",
+      "entry": "#lab?tool=savings"
+    },
+    {
+      "id": "studyplan",
+      "name": "学习量分配",
+      "category": "学习",
+      "entry": "#lab?tool=studyplan"
+    },
+    {
+      "id": "content-search",
+      "name": "全站内容搜索",
+      "category": "全站体验",
+      "entry": "#lab"
+    },
+    {
+      "id": "search-source",
+      "name": "搜索来源筛选",
+      "category": "全站体验",
+      "entry": "#lab"
+    },
+    {
+      "id": "reading-font",
+      "name": "正文字号调整",
+      "category": "全站体验",
+      "entry": "#lab"
+    },
+    {
+      "id": "reading-line",
+      "name": "正文行距调整",
+      "category": "全站体验",
+      "entry": "#lab"
+    },
+    {
+      "id": "reading-width",
+      "name": "阅读宽度调整",
+      "category": "全站体验",
+      "entry": "#lab"
+    },
+    {
+      "id": "reading-contrast",
+      "name": "高对比文字模式",
+      "category": "全站体验",
+      "entry": "#lab"
+    },
+    {
+      "id": "reading-focus",
+      "name": "专注阅读模式",
+      "category": "全站体验",
+      "entry": "#lab"
+    },
+    {
+      "id": "page-outline",
+      "name": "当前页面目录跳转",
+      "category": "全站体验",
+      "entry": "#lab"
+    },
+    {
+      "id": "reading-resume",
+      "name": "恢复上次阅读位置",
+      "category": "全站体验",
+      "entry": "#lab"
+    },
+    {
+      "id": "pinned-pages",
+      "name": "固定常用页面",
+      "category": "全站体验",
+      "entry": "#lab"
+    },
+    {
+      "id": "read-later",
+      "name": "稍后阅读队列",
+      "category": "全站体验",
+      "entry": "#lab"
+    },
+    {
+      "id": "browse-history",
+      "name": "最近浏览记录",
+      "category": "全站体验",
+      "entry": "#lab"
+    },
+    {
+      "id": "page-share",
+      "name": "复制当前页面链接",
+      "category": "全站体验",
+      "entry": "#lab"
+    },
+    {
+      "id": "page-print",
+      "name": "打印当前页面",
+      "category": "全站体验",
+      "entry": "#lab"
+    },
+    {
+      "id": "private-notes",
+      "name": "自动保存私人摘录",
+      "category": "全站体验",
+      "entry": "#lab"
+    },
+    {
+      "id": "selection-capture",
+      "name": "选中文字追加摘录",
+      "category": "全站体验",
+      "entry": "#lab"
+    },
+    {
+      "id": "notes-download",
+      "name": "摘录文本下载",
+      "category": "全站体验",
+      "entry": "#lab"
+    },
+    {
+      "id": "favorite-tools",
+      "name": "工具收藏与收藏筛选",
+      "category": "全站体验",
+      "entry": "#lab"
+    },
+    {
+      "id": "recent-tools",
+      "name": "最近使用工具",
+      "category": "全站体验",
+      "entry": "#lab"
+    },
+    {
+      "id": "tool-search",
+      "name": "工具名称与说明搜索",
+      "category": "全站体验",
+      "entry": "#lab"
+    }
+  ]
+}

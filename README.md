@@ -98,3 +98,73 @@ Sleepy 格式单双周编码依据作者说明：https://blog.qdp.qzz.io/sleepy-
 文字轨道取代专题封面照片，352 条内容均可分组访问并展开原文。桌面每组 12 条、手机每组 6 条，支持前后切换及暂停；悬停、键盘聚焦、弹窗开启、离屏、后台和减少动态效果时暂停。正文改为单列逐条全文，不再折叠为摘要。独立影像馆及原稿完整保留。
 
 漩涡视觉升级：新增四臂螺旋光轨、冷暖呼吸光晕、36 颗稀疏光尘（手机减半）、背景鼠标视差与分批文字入场。无持续 JavaScript 帧循环；切页取消入场动画并释放监听，窗口缩放自动调整留言密度，减少动态效果时停止装饰动画。
+
+## 全站工具与阅读升级（2026-10-28）
+
+本轮新增 63 项功能：43 个纯本地工具，以及 20 项全站阅读、导航与管理功能。入口为导航「工具箱」和左下角浮动入口；阅读面板快捷键 Alt + Shift + P。
+
+个人偏好、页面记录、摘录及工具收藏存于独立 aweb-plus-v1，不改写官方课程、原文或原图。工具输入和结果不自动保存、不上传；搜索仅检索已公开原文与本浏览器的个人内容。
+
+1. 四则表达式（#lab?tool=calc）
+2. 百分比计算（#lab?tool=percent）
+3. 增长率计算（#lab?tool=change）
+4. 比例求解（#lab?tool=ratio）
+5. 加权成绩（#lab?tool=weighted）
+6. 期末目标分（#lab?tool=target）
+7. 学分加权绩点（#lab?tool=gpa）
+8. 描述统计（#lab?tool=stats）
+9. 一次方程（#lab?tool=linear）
+10. 二次方程（#lab?tool=quadratic）
+11. 公约数与公倍数（#lab?tool=gcd）
+12. 质数判断（#lab?tool=prime）
+13. 质因数分解（#lab?tool=factor）
+14. 进制转换（#lab?tool=base）
+15. 长度质量时间换算（#lab?tool=unit）
+16. 温度换算（#lab?tool=temp）
+17. 跑步配速（#lab?tool=pace）
+18. 时长合计（#lab?tool=duration）
+19. 日期间隔（#lab?tool=dategap）
+20. 日期推算（#lab?tool=dateadd）
+21. 日期星期查询（#lab?tool=weekday）
+22. 跨时区时间（#lab?tool=timezone）
+23. 随机抽签（#lab?tool=draw）
+24. 随机分组（#lab?tool=groups）
+25. 顺序洗牌（#lab?tool=shuffle）
+26. 多面骰子（#lab?tool=dice）
+27. 随机口令生成（#lab?tool=password）
+28. 字数与阅读时长（#lab?tool=textcount）
+29. 空白整理（#lab?tool=clean）
+30. 逐行去重（#lab?tool=dedup）
+31. 自然排序（#lab?tool=sort）
+32. 词频统计（#lab?tool=frequency）
+33. 提取网页链接（#lab?tool=urls）
+34. JSON 校验与格式化（#lab?tool=json）
+35. CSV 转 JSON（#lab?tool=csv）
+36. URL 编解码（#lab?tool=urlcode）
+37. Base64 编解码（#lab?tool=base64）
+38. 逐行文本比较（#lab?tool=compare）
+39. 颜色对比度（#lab?tool=contrast）
+40. 预算结余（#lab?tool=budget）
+41. AA 分账（#lab?tool=split）
+42. 目标储蓄周期（#lab?tool=savings）
+43. 学习量分配（#lab?tool=studyplan）
+44. 全站内容搜索（#lab）
+45. 搜索来源筛选（#lab）
+46. 正文字号调整（#lab）
+47. 正文行距调整（#lab）
+48. 阅读宽度调整（#lab）
+49. 高对比文字模式（#lab）
+50. 专注阅读模式（#lab）
+51. 当前页面目录跳转（#lab）
+52. 恢复上次阅读位置（#lab）
+53. 固定常用页面（#lab）
+54. 稍后阅读队列（#lab）
+55. 最近浏览记录（#lab）
+56. 复制当前页面链接（#lab）
+57. 打印当前页面（#lab）
+58. 自动保存私人摘录（#lab）
+59. 选中文字追加摘录（#lab）
+60. 摘录文本下载（#lab）
+61. 工具收藏与收藏筛选（#lab）
+62. 最近使用工具（#lab）
+63. 工具名称与说明搜索（#lab）
