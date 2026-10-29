@@ -77,7 +77,7 @@ const Studio = (() => {
   function settings(){
     dialog('settings-dialog','留住你的校园手帐','<p class="helper">任务、日程、书签、手帐、专注记录、课程表、考试目标和复习卡片保存在当前浏览器。清理浏览器数据会删除它们；网站不会自动同步到云端或 GitHub。</p><div class="stats-row"><div><strong>'+state.tasks.length+'</strong><span>学习任务</span></div><div><strong>'+state.notes.length+'</strong><span>手帐条目</span></div></div><div class="storage-actions"><button class="btn primary" id="export-data">导出备份</button><button class="btn" id="import-data">导入备份</button><input id="import-file" type="file" accept=".json,application/json" hidden></div><p class="helper">导入会合并新增条目，相同编号不会重复添加。</p><hr style="border:0;border-top:1px solid var(--line);margin:24px 0"><h3>显示偏好</h3><label class="field">页面主题<select id="theme-select"><option value="auto">跟随系统</option><option value="light">浅色 · 晴日</option><option value="dark">深色 · 夜读</option></select></label><p class="helper">快捷键 Ctrl / ⌘ + K：全站查找。Esc：关闭弹窗。</p><a class="section-link" href="#login" data-dialog-link>原版账户入口 ↗</a>');$('#theme-select').value=state.theme;
   }
-  const pages=[['letters','校园情书','给裕光路205号的情书 · 全文检索与原貌阅读'],['home','首页','校园入口'],['dashboard','学习工作台','统计与今日课程'],['timetable','课程表','每周安排与冲突检查'],['countdown','考试倒计时','目标与剩余天数'],['flashcards','复习卡片','问答与间隔复习'],['gallery','原图影像','全部原始图片与图标'],['learn','学习自习室','专注计时、任务'],['calendar','校园日历','个人日程'],['resources','资源书架','网盘与书签'],['community','社区','动态与收藏'],['notebook','我的手帐','随手记录'],['about','关于学校','完整历史简介'],['archive','原版网页存档','全部版本'],['login','登录注册','账户界面']];
+  const pages=[['site','关于此网站','网站历史、开发人员与建设理念'],['letters','校园情书','给裕光路205号的情书 · 全文检索与原貌阅读'],['home','首页','校园入口'],['dashboard','学习工作台','统计与今日课程'],['timetable','课程表','每周安排与冲突检查'],['countdown','考试倒计时','目标与剩余天数'],['flashcards','复习卡片','问答与间隔复习'],['gallery','原图影像','全部原始图片与图标'],['learn','学习自习室','专注计时、任务'],['calendar','校园日历','个人日程'],['resources','资源书架','网盘与书签'],['community','社区','动态与收藏'],['notebook','我的手帐','随手记录'],['about','关于学校','完整历史简介'],['archive','原版网页存档','全部版本'],['login','登录注册','账户界面']];
   function commandResults(q){
     q=q.toLowerCase().trim();
     const results=pages.filter(p=>(p[1]+p[2]).includes(q)).map(p=>({title:p[1],label:p[2],href:'#'+p[0]}));
@@ -100,7 +100,7 @@ const Studio = (() => {
   }
   function route(){
     const [page,query]=location.hash.slice(1).split('?'),p=page||'home';
-    const views={home,learn,calendar,resources,lab:()=>CampusPlus.render(),notebook:notes,gallery:()=>Premium.gallery(),...Workspace.views,community:()=>Community.render(),letters:()=>LetterJournal.render()};
+    const views={site:()=>SiteStory.render(),home,learn,calendar,resources,lab:()=>CampusPlus.render(),notebook:notes,gallery:()=>Premium.gallery(),...Workspace.views,community:()=>Community.render(),letters:()=>LetterJournal.render()};
     if(views[p])main.innerHTML=views[p]();else render();
     document.title=(pages.find(x=>x[0]===p)?.[1]||'广附社区')+' · 广附社区';
     document.querySelectorAll('header nav a').forEach(a=>{a.removeAttribute('aria-current');if(a.hash==='#'+p)a.setAttribute('aria-current','page')});
