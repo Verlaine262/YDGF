@@ -62,3 +62,7 @@ python -m http.server 8000
 ## 代码工作区
 
 入口 #code，独立页面 code/index.html。参考 GitHub 仓库界面，实现本机文件创建、编辑、重命名、删除、搜索、JSON 导入导出、最多 10 个项目快照和静态 HTML 预览。预览隔离运行，禁止脚本和外部网络，CSS 请内联。数据使用 gf-code-workspace-v1，不自动提交 GitHub，不纳入站内其他模块备份。
+
+## 视频浏览
+
+入口 #videos，独立页面 videos/index.html。YouTube 风格搜索、分类和卡片布局，支持原生视频播放、稍后观看、直链观看记录、列表连播、添加 HTTPS 视频直链与打开本机视频。内置一个明确标注的 W3Schools / Blender 动画示例，加载依赖外网。本站没有视频上传服务器；本机文件刷新后需重新选择，不计入持久观看历史。直链、收藏和历史保存于 gf-video-browser-v1，不自动纳入其他模块备份。普通平台页面地址不是可播放直链。
