@@ -100,7 +100,7 @@ const Studio = (() => {
   }
   function route(){
     const [page,query]=location.hash.slice(1).split('?'),p=page||'home';
-    const views={galgame:()=>'<section class="vn-wrapper"><iframe title="晚自习之后 · 校园视觉小说" src="game/index.html?v=20261102-09" allow="fullscreen" style="display:block;width:100%;height:calc(100svh - 80px);min-height:640px;border:0"></iframe></section>',support:()=>TechSupport.render(),site:()=>SiteStory.render(),home,learn,calendar,resources,lab:()=>CampusPlus.render(),notebook:notes,gallery:()=>Premium.gallery(),...Workspace.views,community:()=>Community.render(),letters:()=>LetterJournal.render()};
+    const views={code:()=>'<iframe title="代码工作区" src="code/index.html?v=20261102-10" style="display:block;width:100%;height:1100px;border:0"></iframe>',galgame:()=>'<section class="vn-wrapper"><iframe title="晚自习之后 · 校园视觉小说" src="game/index.html?v=20261102-09" allow="fullscreen" style="display:block;width:100%;height:calc(100svh - 80px);min-height:640px;border:0"></iframe></section>',support:()=>TechSupport.render(),site:()=>SiteStory.render(),home,learn,calendar,resources,lab:()=>CampusPlus.render(),notebook:notes,gallery:()=>Premium.gallery(),...Workspace.views,community:()=>Community.render(),letters:()=>LetterJournal.render()};
     if(views[p])main.innerHTML=views[p]();else render();
     document.title=(pages.find(x=>x[0]===p)?.[1]||'广附社区')+' · 广附社区';
     document.querySelectorAll('header nav a').forEach(a=>{a.removeAttribute('aria-current');if(a.hash==='#'+p)a.setAttribute('aria-current','page')});
