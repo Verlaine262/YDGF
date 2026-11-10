@@ -10,11 +10,11 @@
 | assets/community.js | 帖子、评论、筛选、创作、删除与站务标志 |
 | assets/community-feed.js | 社区布局增强、侧栏面板、演示聊天与通话 |
 | assets/community-feed.css | 社区三栏样式及演示界面 |
-| assets/official-schedule.js | 固定课程表展示 |
+| assets/original-media.js | 8 个精选影像库条目及来源 |
 | assets/letters.js、letter-journal.js、memory-vortex.js | 原页、逐条来信与回忆动画 |
 | assets/site-story.js、tech-support.js | 关于网站与技术支持 |
 | originals/ | 保留的原始文件 |
-| data/ | 官方课表及专题数据 |
+| data/ | 专题数据；GDPU2 官方课表数据已移除 |
 | .github/workflows/pages.yml | GitHub Pages 发布工作流 |
 
 样式存在多个历史层，修改前检查 index.html 的加载顺序和选择器优先级。社区规则应限制在社区范围，避免覆盖其他页面。不要运行旧开发目录的 build.cjs 覆盖当前站点。
@@ -48,3 +48,13 @@
 - 回退：在 GitHub 中对目标提交执行 revert 并重新部署，保留历史记录；部署回退不会自动恢复浏览器里已删除的数据。
 
 发布目录会被整体托管，不要把密钥、数据库配置、私人备份或本机绝对路径加入仓库。
+
+## 当前内容维护约束（2026-11-10）
+
+- 不重新引入已删除的官方课程数据或旧社区帖子。
+- 影像库通过 assets/original-media.js 的 gallery 数组维护，仅保留 README 中列出的 8 项。
+- 删除图片时同步清理画廊、CSS 和 HTML 引用；图片替换后检查真实格式与文件扩展名匹配。
+- preservation-manifest.json 含历史哈希，不能直接作为替换后素材的当前验证依据。
+- 原版社区 HTML 已改为跳转页；历史记录文档中的旧功能描述不代表现状。
+- game/、code/、videos/ 为可独立打开的专题页面；验证站内 iframe 与独立入口。
+- 视频静态文件位于 videos/media/，不应在普通文档更新中重复转码或移除。
