@@ -85,16 +85,6 @@
     "sha256": "37629f92c9197b3c6ec047e0170595c766ab677503e00288dc78bcecba4d15fb"
   },
   {
-    "source": "community/image/117661040_p4.png",
-    "published": "originals/community/image/117661040_p4.png",
-    "sha256": "b09cc76f8d81c01ddf87d5be8da41a9b13710dbbff72a335b904baecf449c7b8"
-  },
-  {
-    "source": "community/image/118098344_p1.jpg",
-    "published": "originals/community/image/118098344_p1.jpg",
-    "sha256": "2121fce59fcc2f2c819cc61821ed7887052e730cd0f36cd71b3314bf08ca4dbc"
-  },
-  {
     "source": "community/image/1信息.png",
     "published": "originals/community/image/1信息.png",
     "sha256": "187b39048d682898cdf5016b004b3e774f71ea01a559d1056d4cac3cda3af20f"
@@ -160,16 +150,6 @@
     "sha256": "944cba2364f963b52fa6b0421618de3491bb7f4708d17530ecf5728ea55b81e0"
   },
   {
-    "source": "community - 副本/image/117661040_p4.png",
-    "published": "originals/community - 副本/image/117661040_p4.png",
-    "sha256": "b09cc76f8d81c01ddf87d5be8da41a9b13710dbbff72a335b904baecf449c7b8"
-  },
-  {
-    "source": "community - 副本/image/118098344_p1.jpg",
-    "published": "originals/community - 副本/image/118098344_p1.jpg",
-    "sha256": "2121fce59fcc2f2c819cc61821ed7887052e730cd0f36cd71b3314bf08ca4dbc"
-  },
-  {
     "source": "community - 副本/image/信息.png",
     "published": "originals/community - 副本/image/信息.png",
     "sha256": "187b39048d682898cdf5016b004b3e774f71ea01a559d1056d4cac3cda3af20f"
@@ -208,16 +188,6 @@
     "source": "community - 副本 (2)/image/150466509_p0.jpg",
     "published": "originals/community - 副本 (2)/image/150466509_p0.jpg",
     "sha256": "b4a275cc650c266c15d0a9432fbd7bf63209539647ae66bbe5740480570a223b"
-  },
-  {
-    "source": "community - 副本 (2)/image/117661040_p4.png",
-    "published": "originals/community - 副本 (2)/image/117661040_p4.png",
-    "sha256": "b09cc76f8d81c01ddf87d5be8da41a9b13710dbbff72a335b904baecf449c7b8"
-  },
-  {
-    "source": "community - 副本 (2)/image/118098344_p1.jpg",
-    "published": "originals/community - 副本 (2)/image/118098344_p1.jpg",
-    "sha256": "2121fce59fcc2f2c819cc61821ed7887052e730cd0f36cd71b3314bf08ca4dbc"
   },
   {
     "source": "community - 副本 (2)/image/1信息.png",
